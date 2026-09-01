@@ -11,7 +11,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { products } from "@/lib/data";
 import SectionLabel from "@/components/shared/SectionLabel";
 import { useNilex } from "@/store/navigation";
-import { Plus, Eye } from "lucide-react";
+import { Eye } from "lucide-react";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -20,8 +20,6 @@ if (typeof window !== "undefined") {
 export default function NewArrivals() {
   const root = useRef<HTMLDivElement>(null);
   const setPage = useNilex((s) => s.setPage);
-  const addToCart = useNilex((s) => s.addToCart);
-  const setCartOpen = useNilex((s) => s.setCartOpen);
   const [visible, setVisible] = useState(8);
 
   useEffect(() => {
@@ -46,11 +44,6 @@ export default function NewArrivals() {
     }, root);
     return () => ctx.revert();
   }, [visible]);
-
-  const handleAdd = (id: string, size: string) => {
-    addToCart(id, size);
-    setCartOpen(true);
-  };
 
   const visibleProducts = products.slice(0, visible);
 
@@ -123,29 +116,17 @@ export default function NewArrivals() {
 
                 {/* Quick actions */}
                 <div className="absolute inset-x-0 bottom-0 translate-y-full opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                  <div className="flex">
-                    <button
-                      data-cursor="hover"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleAdd(p.id, p.sizes[0]);
-                      }}
-                      className="flex flex-1 items-center justify-center gap-2 bg-nilex-navy py-3 text-xs uppercase tracking-luxe text-nilex-cream transition-colors hover:bg-nilex-gold hover:text-nilex-navy"
-                    >
-                      <Plus className="h-3 w-3" strokeWidth={1.5} /> Add
-                    </button>
-                    <button
-                      data-cursor="hover"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setPage("shop");
-                      }}
-                      className="flex w-12 items-center justify-center bg-nilex-navy-soft text-nilex-cream transition-colors hover:bg-nilex-gold hover:text-nilex-navy"
-                      aria-label="Quick view"
-                    >
-                      <Eye className="h-3.5 w-3.5" strokeWidth={1.5} />
-                    </button>
-                  </div>
+                  <button
+                    data-cursor="hover"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setPage("shop");
+                    }}
+                    className="flex w-full items-center justify-center gap-2 bg-nilex-navy py-3 text-xs uppercase tracking-luxe text-nilex-cream transition-colors hover:bg-nilex-gold hover:text-nilex-navy"
+                    aria-label="Quick view"
+                  >
+                    <Eye className="h-3.5 w-3.5" strokeWidth={1.5} /> Quick view
+                  </button>
                 </div>
               </div>
 
