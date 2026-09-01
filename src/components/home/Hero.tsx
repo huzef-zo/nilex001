@@ -128,7 +128,7 @@ export default function Hero() {
           <div className="mt-10 flex flex-col items-start gap-8 lg:flex-row lg:items-end lg:justify-between">
             <p className="hero-fade max-w-md text-base leading-relaxed text-nilex-cream/70 md:text-lg">
               Nilex Fashion House is a modern atelier — quietly luxurious knitwear,
-              tailoring, footwear and accessories, made in honest materials and
+              footwear, outerwear and accessories, made in honest materials and
               built to be worn for years, not seasons.
             </p>
 

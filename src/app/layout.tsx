@@ -24,16 +24,17 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nilex Fashion House — Modern Menswear, Tailored for the Modern Man",
+  title: "Nilex Fashion House — Modern Menswear, Crafted for the Modern Man",
   description:
-    "Nilex Fashion House — a modern menswear atelier crafting elevated essentials, tailored suits, knitwear and footwear. Discover the new collection.",
+    "Nilex Fashion House — a modern menswear atelier crafting elevated footwear, knitwear, outerwear and accessories. Discover the new collection.",
   keywords: [
     "Nilex",
     "Nilex Fashion House",
     "menswear",
     "men's clothing",
-    "tailored suits",
+    "footwear",
     "knitwear",
+    "outerwear",
     "sneakers",
     "fashion house",
     "modern menswear",
@@ -44,14 +45,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Nilex Fashion House",
-    description: "Modern menswear, tailored for the modern man.",
+    description: "Modern menswear, crafted for the modern man.",
     siteName: "Nilex Fashion House",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Nilex Fashion House",
-    description: "Modern menswear, tailored for the modern man.",
+    description: "Modern menswear, crafted for the modern man.",
   },
 };
 

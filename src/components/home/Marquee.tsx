@@ -6,7 +6,7 @@
 export default function Marquee() {
   const phrases = [
     "Knitwear from Italian merino",
-    "Tailoring cut by hand",
+    "Outerwear engineered for the city",
     "Footwear built to last",
     "Accessories in full-grain leather",
     "Made in our atelier",
