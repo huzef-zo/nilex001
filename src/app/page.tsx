@@ -21,7 +21,6 @@ import { SmoothScrollProvider } from "@/components/layout/SmoothScrollProvider";
 import Cursor from "@/components/cursor/Cursor";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import CartDrawer from "@/components/layout/CartDrawer";
 import PageLoader from "@/components/layout/PageLoader";
 import Scene3D from "@/components/three/Scene3D";
 import HomePage from "@/components/home/HomePage";
@@ -70,8 +69,6 @@ export default function Page() {
 
         <Footer />
       </div>
-
-      <CartDrawer />
     </SmoothScrollProvider>
   );
 }
