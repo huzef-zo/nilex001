@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { STOCK_IMAGES } from "@/lib/data";
+import { STOCK_IMAGES, NILEX_SNEAKER_OLIVE } from "@/lib/data";
 import SectionLabel from "@/components/shared/SectionLabel";
 
 if (typeof window !== "undefined") {
@@ -99,25 +99,22 @@ export default function EditorialSplit() {
       <div className="grid items-stretch lg:grid-cols-2">
         <div className="ed-copy order-2 flex items-center bg-nilex-navy px-8 py-16 lg:order-1 lg:px-16 lg:py-24">
           <div className="max-w-md">
-            <SectionLabel>Volume II · City Tailoring</SectionLabel>
+            <SectionLabel>Volume II · Sole Craft</SectionLabel>
             <h3 className="mt-5 font-display text-3xl font-medium leading-tight text-nilex-cream md:text-4xl lg:text-5xl">
-              Soft shoulders, <em className="italic text-nilex-gold">hard city</em>.
+              Built to last, <em className="italic text-nilex-gold">made to move</em>.
             </h3>
             <p className="mt-6 text-base leading-relaxed text-nilex-cream/70">
-              Cut from Italian worsted wools with a half-canvas construction and a
-              soft Neapolitan shoulder. The suit moves with you — from desk to
-              dinner to the airport — without ever looking like you tried.
+              Every Nilex shoe starts with a sculpted last and full-grain leather or suede, finished by hand and built to be resoled for years, not seasons.
             </p>
             <p className="mt-6 text-base leading-relaxed text-nilex-cream/70">
-              Two silhouettes (slim and relaxed), five core colourways, and the
-              option to commission a made-to-measure piece in eight weeks.
+              Paired with technical outerwear — taped seams, weatherproof shells, insulated but light. Engineered for the commute, finished with atelier-level care.
             </p>
           </div>
         </div>
         <div className="ed-img order-1 relative aspect-[4/5] overflow-hidden lg:order-2 lg:aspect-auto lg:min-h-[80vh]">
           <Image
-            src={STOCK_IMAGES.suitMassimo}
-            alt="City tailoring editorial"
+            src={NILEX_SNEAKER_OLIVE}
+            alt="Sole craft editorial"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"

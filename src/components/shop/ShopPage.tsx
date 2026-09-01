@@ -17,7 +17,7 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-const categories = ["All", "Knitwear", "Footwear", "Tailoring", "Outerwear", "Accessories"] as const;
+const categories = ["All", "Knitwear", "Footwear", "Outerwear", "Accessories"] as const;
 const sortOptions = [
   { value: "newest", label: "Newest" },
   { value: "price-asc", label: "Price: Low to High" },
@@ -93,7 +93,7 @@ export default function ShopPage() {
             </h1>
           </div>
           <div className="max-w-md text-sm leading-relaxed text-nilex-navy/60">
-            The full Nilex collection — knitwear, tailoring, footwear, outerwear
+            The full Nilex collection — knitwear, footwear, outerwear
             and accessories. Filter by category, sort by price, and tap any
             piece for details, fabric and sizing.
           </div>

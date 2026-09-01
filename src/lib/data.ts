@@ -7,7 +7,7 @@
 export type Product = {
   id: string;
   name: string;
-  category: "Knitwear" | "Footwear" | "Tailoring" | "Outerwear" | "Accessories";
+  category: "Knitwear" | "Footwear" | "Outerwear" | "Accessories";
   price: number;
   compareAt?: number;
   colorway: string;
@@ -22,16 +22,12 @@ export type Product = {
 // Uploaded Nilex photos (local)
 const NILEX_KNIT_BEIGE = "/images/products/nilex-knit-cardigan-beige.jpg";
 const NILEX_KNIT_GRAY = "/images/products/nilex-quarter-zip-gray.jpg";
-const NILEX_SNEAKER_OLIVE = "/images/products/nilex-sneaker-olive.jpg";
+export const NILEX_SNEAKER_OLIVE = "/images/products/nilex-sneaker-olive.jpg";
 const NILEX_SNEAKER_SUEDE = "/images/products/nilex-sneaker-suede.jpg";
 const NILEX_SNEAKER_BLACK = "/images/products/nilex-sneaker-black.jpg";
 
 // Stock photo URLs (OSS-hosted by ZAI image search)
 const STOCK = {
-  suitMassimo: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/43a4f633702e.jpg",
-  suitWehilion: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/56edce158414.webp",
-  suitVonBaer: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e3f99d4bff42.jpg",
-  suitAlamy: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c2fbf901e557.jpg",
   streetWwd: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9f8439fcda9c.jpg",
   streetStyleRave: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/865bee2d1520.png",
   streetPinterest: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/437f1add67f5.jpg",
@@ -124,32 +120,6 @@ export const products: Product[] = [
     sizes: ["40", "41", "42", "43", "44", "45"],
   },
   {
-    id: "nx-suit-01",
-    name: "Tailored Navy Two-Piece",
-    category: "Tailoring",
-    price: 890,
-    colorway: "Midnight Navy",
-    image: STOCK.suitMassimo,
-    hoverImage: STOCK.suitAlamy,
-    badge: "Limited",
-    description:
-      "A two-piece suit cut from a structured navy worsted wool with a half-canvas construction. Slim notch lapel, dual back vents, and a clean trouser break. Made for the modern city wardrobe.",
-    fabric: "100% Italian Worsted Wool",
-    sizes: ["46R", "48R", "50R", "52R", "54R"],
-  },
-  {
-    id: "nx-suit-02",
-    name: "Soft-Shoulder Blazer",
-    category: "Tailoring",
-    price: 620,
-    colorway: "Charcoal",
-    image: STOCK.suitVonBaer,
-    description:
-      "An unstructured blazer in charcoal with a soft Neapolitan shoulder and patch pockets. Lightweight and unlined for an effortless drape over knitwear or a tee.",
-    fabric: "Wool-linen blend",
-    sizes: ["46R", "48R", "50R", "52R"],
-  },
-  {
     id: "nx-outer-01",
     name: "Field Overcoat",
     category: "Outerwear",
@@ -159,7 +129,7 @@ export const products: Product[] = [
     hoverImage: STOCK.outerwearSwitchback,
     badge: "New",
     description:
-      "A long-line overcoat in a stone melton with a clean button stance and angled pockets. Tailored body with a relaxed shoulder. Built to layer over suiting or knitwear.",
+      "A long-line overcoat in a stone melton with a clean button stance and angled pockets. Structured body with a relaxed shoulder. Built to layer over outerwear or knitwear.",
     fabric: "80% Wool, 20% Cashmere",
     sizes: ["S", "M", "L", "XL"],
   },
@@ -240,15 +210,15 @@ export const collections: Collection[] = [
     productCount: 14,
   },
   {
-    id: "city-tailoring",
-    name: "City Tailoring",
+    id: "sole-craft",
+    name: "Sole Craft",
     season: "AW26 — Volume II",
-    tagline: "Modern tailoring for the modern city.",
+    tagline: "Every step, considered.",
     description:
-      "Soft-shoulder suits, unstructured blazers and tailored trousers. Cut from Italian wools with a half-canvas construction, made to move with you through the day.",
-    cover: STOCK.suitMassimo,
-    alt: STOCK.boutiqueYelp,
-    productCount: 22,
+      "Nilex footwear is built with the same rigor our ateliers have always applied — sculpted lasts, full-grain leathers and suedes, and soles engineered to be resoled rather than replaced. Paired with lightweight technical outerwear designed to move as fast as the city does.",
+    cover: NILEX_SNEAKER_SUEDE,
+    alt: STOCK.outerwearForbes,
+    productCount: 16,
   },
   {
     id: "street-luxe",
@@ -276,7 +246,7 @@ export const collections: Collection[] = [
 
 export const editorial = [
   { image: STOCK.portraitUnsplash, title: "The Quiet Confidence", caption: "AW26 Campaign — Look 04" },
-  { image: STOCK.portraitDeposit2, title: "Soft Tailoring, Hard City", caption: "AW26 Campaign — Look 11" },
+  { image: STOCK.portraitDeposit2, title: "Built to Last, Made to Move", caption: "AW26 Campaign — Look 11" },
   { image: STOCK.streetMensFlair, title: "Layers, Light, Shadow", caption: "AW26 Campaign — Look 07" },
   { image: STOCK.outerwearForbes, title: "The Long Line", caption: "AW26 Campaign — Look 02" },
 ];
@@ -284,7 +254,7 @@ export const editorial = [
 export const lookbook = [
   { image: STOCK.portraitUnsplash, label: "Look 01 — The Coat" },
   { image: STOCK.streetWwd, label: "Look 02 — The Knit" },
-  { image: STOCK.suitAlamy, label: "Look 03 — The Suit" },
+  { image: NILEX_SNEAKER_OLIVE, label: "Look 03 — The Footwear" },
   { image: STOCK.streetMensFlair, label: "Look 04 — The Street" },
   { image: STOCK.outerwearSwitchback, label: "Look 05 — The Field" },
   { image: STOCK.portraitDeposit2, label: "Look 06 — The Portrait" },
@@ -293,7 +263,7 @@ export const lookbook = [
 export const testimonials = [
   {
     quote:
-      "Nilex is the only house that consistently delivers tailoring that feels both modern and timeless. My navy two-piece is three years old and still gets compliments.",
+      "Nilex is the only house that consistently delivers footwear and outerwear that feel both modern and timeless. My Drift Low Trainers have held up for two winters and still get compliments.",
     author: "Marcus Aldridge",
     role: "Creative Director, London",
   },
@@ -305,7 +275,7 @@ export const testimonials = [
   },
   {
     quote:
-      "I came for the sneakers, stayed for the suits. The house has a clear point of view and the quality is uncompromising.",
+      "I came for the sneakers, stayed for the outerwear. The house has a clear point of view and the quality is uncompromising.",
     author: "Idris Said",
     role: "Photographer, Dubai",
   },
