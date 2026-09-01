@@ -313,7 +313,7 @@ export const testimonials = [
 
 export const navItems = [
   { key: "home", label: "Home" },
-  { key: "shop", label: "Shop" },
+  { key: "shop", label: "Browse" },
   { key: "collections", label: "Collections" },
   { key: "about", label: "Atelier" },
   { key: "contact", label: "Contact" },
