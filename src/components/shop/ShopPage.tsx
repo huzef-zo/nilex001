@@ -10,10 +10,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { products, Product } from "@/lib/data";
 import SectionLabel from "@/components/shared/SectionLabel";
-import MagneticButton from "@/components/shared/MagneticButton";
-import { useNilex } from "@/store/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { SlidersHorizontal, X, Check, Plus, Minus } from "lucide-react";
+import { SlidersHorizontal, X, Check } from "lucide-react";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -29,8 +27,6 @@ const sortOptions = [
 
 export default function ShopPage() {
   const root = useRef<HTMLDivElement>(null);
-  const addToCart = useNilex((s) => s.addToCart);
-  const setCartOpen = useNilex((s) => s.setCartOpen);
 
   const [category, setCategory] = useState<(typeof categories)[number]>("All");
   const [sort, setSort] = useState<(typeof sortOptions)[number]["value"]>("newest");
@@ -83,12 +79,6 @@ export default function ShopPage() {
   const openQuickView = (p: Product) => {
     setSelectedSize(p.sizes[0] ?? "");
     setQuickView(p);
-  };
-
-  const handleAdd = (p: Product) => {
-    addToCart(p.id, selectedSize || p.sizes[0]);
-    setQuickView(null);
-    setCartOpen(true);
   };
 
   return (
@@ -357,17 +347,7 @@ export default function ShopPage() {
                     </div>
                   </div>
 
-                  <div className="mt-8 flex gap-3">
-                    <MagneticButton
-                      onClick={() => handleAdd(quickView)}
-                      variant="primary"
-                      className="flex-1"
-                    >
-                      Add to Cart
-                    </MagneticButton>
-                  </div>
-
-                  <p className="mt-6 text-xs text-nilex-navy/50">
+                  <p className="mt-8 text-xs text-nilex-navy/50">
                     Complimentary shipping · Free 30-day returns · Made-to-measure available on tailoring
                   </p>
                 </div>
