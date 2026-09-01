@@ -87,7 +87,7 @@ export default function ShopPage() {
         {/* Header */}
         <div className="mb-12 flex flex-col gap-6 border-b border-nilex-navy/10 pb-10 lg:mb-16 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <SectionLabel>The Shop · All Pieces</SectionLabel>
+            <SectionLabel>The Browse · All Pieces</SectionLabel>
             <h1 className="mt-5 font-display text-5xl font-medium leading-tight md:text-6xl lg:text-7xl">
               Every piece, <em className="italic">in one place</em>.
             </h1>
@@ -178,12 +178,6 @@ export default function ShopPage() {
               </ul>
             </div>
 
-            <div className="mt-8 border-t border-nilex-navy/10 pt-6">
-              <p className="text-xs leading-relaxed text-nilex-navy/50">
-                Complimentary shipping on orders over $250. Free returns within 30
-                days. Made-to-measure available on tailoring.
-              </p>
-            </div>
           </aside>
 
           {/* Product grid */}
@@ -347,9 +341,6 @@ export default function ShopPage() {
                     </div>
                   </div>
 
-                  <p className="mt-8 text-xs text-nilex-navy/50">
-                    Complimentary shipping · Free 30-day returns · Made-to-measure available on tailoring
-                  </p>
                 </div>
               </div>
             </motion.div>

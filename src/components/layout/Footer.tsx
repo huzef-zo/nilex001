@@ -112,7 +112,6 @@ export default function Footer() {
           <div>
             <p className="mb-5 text-xs uppercase tracking-luxe text-nilex-gold/80">Client Care</p>
             <ul className="space-y-3 text-sm text-white/70">
-              <li><button data-cursor="hover" className="link-underline hover:text-nilex-gold">Shipping & Returns</button></li>
               <li><button data-cursor="hover" className="link-underline hover:text-nilex-gold">Size Guide</button></li>
               <li><button data-cursor="hover" className="link-underline hover:text-nilex-gold">Book an Appointment</button></li>
               <li><button data-cursor="hover" className="link-underline hover:text-nilex-gold">Care & Repair</button></li>
