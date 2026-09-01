@@ -143,7 +143,7 @@ function NilexMark() {
     if (!group.current) return;
 
     // Idle slow rotation
-    group.current.rotation.y += delta * 0.12;
+    group.current.rotation.y += delta * 0.07;
     group.current.rotation.z = Math.sin(t * 0.3) * 0.05;
 
     // Scroll-driven tilt (lerp toward target).
@@ -170,7 +170,7 @@ function NilexMark() {
     // Slightly oscillate emissive intensity for a "breathing" feel.
     // R3F materials are 3D objects — direct mutation is the intended pattern.
     // eslint-disable-next-line react-hooks/immutability
-    materials.gold.emissiveIntensity = 0.3 + Math.sin(t * 1.1) * 0.1;
+    materials.gold.emissiveIntensity = 0.3 + Math.sin(t * 0.6) * 0.1;
     void lerpFactor;
   });
 
