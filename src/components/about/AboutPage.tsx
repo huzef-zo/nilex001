@@ -19,29 +19,19 @@ if (typeof window !== "undefined") {
 
 const timeline = [
   {
-    year: "2012",
-    title: "The First Room",
-    body: "Nilex opens above a tailor's shop on Savile Row. A cutting table, one assistant, twelve pieces — and a single idea: that modern menswear doesn't need to be loud.",
+    year: "2026",
+    title: "The House Opens",
+    body: "Nilex opens as a small house built around footwear, knitwear and outerwear — considered design, honest materials, and no more than we can finish well.",
   },
   {
-    year: "2015",
-    title: "Italian Fabrics",
-    body: "We travel to Biella and sign our first fabric contracts with a mill that's been weaving wool since 1682. Our worsteds and knits begin to carry their name on the inside seam.",
+    year: "2026",
+    title: "The First Collection",
+    body: "Twelve pieces mark our first season: sculpted trainers, technical outerwear and fine-gauge knitwear, built to be worn for years, not seasons.",
   },
   {
-    year: "2018",
-    title: "The Knitwear Programme",
-    body: "Our first full knitwear line launches — fine-gauge merino cardigans, quarter-zips and polo collars, all finished by hand in our atelier. The Atelier Quarter-Zip becomes our first bestseller.",
-  },
-  {
-    year: "2021",
-    title: "Footwear, Sculpted",
-    body: "We partner with a third-generation shoe-maker in Marche, Italy. The Drift Low Trainer launches as our first sneaker — sculpted, quiet, and built on a single last that we still use today.",
-  },
-  {
-    year: "2024",
-    title: "Cities Worldwide",
-    body: "Nilex opens appointment-only ateliers in nine cities, from London to Tokyo. We still make twelve pieces a season — they're just seen by more people.",
+    year: "Coming Soon",
+    title: "Try It On",
+    body: "We're building a way to try on Nilex pieces virtually before you commit — so you can see exactly how each piece looks on you before it arrives.",
   },
 ];
 
@@ -139,7 +129,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-nilex-navy-deep/40 via-transparent to-nilex-navy-deep" />
         <div className="absolute inset-0 flex items-center">
           <div className="mx-auto w-full max-w-[1600px] px-6 lg:px-12">
-            <SectionLabel>The Atelier · Est. 2012</SectionLabel>
+            <SectionLabel>The House · Est. 2026</SectionLabel>
             <h1 className="mt-5 max-w-5xl font-display text-5xl font-medium leading-[1.05] md:text-6xl lg:text-8xl">
               A small house, <em className="italic text-nilex-gold">a single point of view</em>.
             </h1>
@@ -151,9 +141,7 @@ export default function AboutPage() {
       <section className="section-y px-6 lg:px-12">
         <div className="mx-auto max-w-3xl">
           <p className="font-display text-2xl italic leading-relaxed text-nilex-cream/90 md:text-3xl lg:text-4xl">
-            Nilex began in 2012 above a tailor&apos;s shop on Savile Row — a small
-            room, a cutting table, and an idea: that modern menswear
-            didn&apos;t need to be loud to be noticed.
+            Nilex opened this year with a simple idea: modern menswear doesn&apos;t need to be loud to be noticed.
           </p>
           <div className="mt-12 space-y-6 text-base leading-relaxed text-nilex-cream/70 md:text-lg">
             <p>
@@ -170,9 +158,7 @@ export default function AboutPage() {
               Quiet, considered, made to last.
             </p>
             <p>
-              Fourteen years on, the house is in nine cities and the atelier is
-              still above a tailor&apos;s shop. The cutting table is the same
-              one. The point of view hasn&apos;t moved.
+              The house is new, but the point of view isn&apos;t rushed. Every piece still starts on the page, gets sketched, draped, and refined until it earns its place.
             </p>
           </div>
         </div>
@@ -202,9 +188,9 @@ export default function AboutPage() {
       <section className="section-y px-6 lg:px-12">
         <div className="mx-auto max-w-[1600px]">
           <div className="mb-12 lg:mb-20">
-            <SectionLabel>The House · A Brief History</SectionLabel>
+            <SectionLabel>The House · Where We&apos;re Headed</SectionLabel>
             <h2 className="mt-5 max-w-3xl font-display text-4xl font-medium leading-tight md:text-5xl lg:text-6xl">
-              Fourteen years, <em className="italic text-nilex-gold">told briefly</em>.
+              A new house, <em className="italic text-nilex-gold">told honestly</em>.
             </h2>
           </div>
 

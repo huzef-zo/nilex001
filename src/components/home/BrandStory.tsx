@@ -90,17 +90,16 @@ export default function BrandStory() {
         <div className="bs-grid grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           {/* Left — pinned text */}
           <div className="bs-left">
-            <SectionLabel>The Atelier · Est. 2012</SectionLabel>
+            <SectionLabel>The House · Est. 2026</SectionLabel>
             <h2 className="mt-5 font-display text-4xl font-medium leading-tight text-nilex-cream md:text-5xl lg:text-6xl">
               A small house, a single <em className="italic text-nilex-gold">point of view</em>.
             </h2>
 
             <div className="mt-8 max-w-md space-y-5 text-base leading-relaxed text-nilex-cream/70">
               <p>
-                Nilex began in 2012 above a tailor&apos;s shop on Savile Row — a small
-                room, a cutting table, and an idea: that modern menswear didn&apos;t
-                need to be loud to be noticed. We started with twelve pieces. We
-                still make twelve pieces a season.
+                Nilex opened this year with a simple idea: modern menswear — footwear,
+                knitwear and outerwear — doesn&apos;t need to be loud to be noticed. We
+                started with twelve pieces. We plan to keep it that way each season.
               </p>
               <p>
                 Every garment is cut from Italian and British fabrics, finished by

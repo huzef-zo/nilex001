@@ -292,9 +292,9 @@ export const navItems = [
 export type PageKey = (typeof navItems)[number]["key"];
 
 export const stats = [
-  { value: 14, suffix: "", label: "Years of the House" },
-  { value: 47, suffix: "", label: "Master Artisans" },
-  { value: 9, suffix: "", label: "Cities Worldwide" },
+  { value: 2026, suffix: "", label: "Est." },
+  { value: 12, suffix: "", label: "Pieces This Season" },
+  { value: 1, suffix: "", label: "Flagship Atelier" },
   { value: 100, suffix: "%", label: "Italian Fabrics" },
 ];
 

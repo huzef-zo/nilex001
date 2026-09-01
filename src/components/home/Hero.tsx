@@ -183,7 +183,7 @@ export default function Hero() {
               NILEX
             </p>
             <p className="text-[10px] uppercase tracking-luxe text-nilex-gold/80">
-              Fashion House · 2012
+              Fashion House · Est. 2026
             </p>
           </div>
         </div>
