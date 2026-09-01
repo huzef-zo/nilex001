@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useNilex } from "@/store/navigation";
 import { navItems, products } from "@/lib/data";
-import { Menu, X, ShoppingBag, Search } from "lucide-react";
+import { Menu, X, Search } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { scrollTo } from "./SmoothScrollProvider";
 
@@ -17,11 +17,7 @@ export default function Navbar() {
   const setPage = useNilex((s) => s.setPage);
   const menuOpen = useNilex((s) => s.menuOpen);
   const setMenuOpen = useNilex((s) => s.setMenuOpen);
-  const setCartOpen = useNilex((s) => s.setCartOpen);
-  const cart = useNilex((s) => s.cart);
   const [scrolled, setScrolled] = useState(false);
-
-  const cartCount = cart.reduce((sum, item) => sum + item.qty, 0);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -96,19 +92,6 @@ export default function Navbar() {
               className="hidden h-10 w-10 items-center justify-center rounded-full text-nilex-cream/80 transition-colors hover:bg-white/5 hover:text-nilex-gold md:flex"
             >
               <Search className="h-4 w-4" strokeWidth={1.5} />
-            </button>
-            <button
-              onClick={() => setCartOpen(true)}
-              data-cursor="hover"
-              aria-label={`Cart with ${cartCount} items`}
-              className="relative flex h-10 w-10 items-center justify-center rounded-full text-nilex-cream/80 transition-colors hover:bg-white/5 hover:text-nilex-gold"
-            >
-              <ShoppingBag className="h-4 w-4" strokeWidth={1.5} />
-              {cartCount > 0 && (
-                <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-nilex-gold px-1 text-[10px] font-semibold text-nilex-navy">
-                  {cartCount}
-                </span>
-              )}
             </button>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
