@@ -82,7 +82,7 @@ export default function AboutPage() {
             trigger: ".tl-track",
             start: "top 70%",
             end: "bottom bottom",
-            scrub: true,
+            scrub: 1.2,
           },
         }
       );
