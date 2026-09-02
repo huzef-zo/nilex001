@@ -9,7 +9,6 @@ import FeaturedCollections from "@/components/home/FeaturedCollections";
 import NewArrivals from "@/components/home/NewArrivals";
 import EditorialSplit from "@/components/home/EditorialSplit";
 import BrandStory from "@/components/home/BrandStory";
-import Lookbook from "@/components/home/Lookbook";
 import Testimonials from "@/components/home/Testimonials";
 import BrandValues from "@/components/home/BrandValues";
 
@@ -22,7 +21,6 @@ export default function HomePage() {
       <NewArrivals />
       <EditorialSplit />
       <BrandStory />
-      <Lookbook />
       <Testimonials />
       <BrandValues />
     </main>

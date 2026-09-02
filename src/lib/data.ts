@@ -29,9 +29,6 @@ const NILEX_SNEAKER_BLACK = "/images/products/nilex-sneaker-black.jpg";
 // Stock photo URLs (OSS-hosted by ZAI image search)
 const STOCK = {
   streetWwd: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9f8439fcda9c.jpg",
-  streetStyleRave: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/865bee2d1520.png",
-  streetPinterest: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/437f1add67f5.jpg",
-  streetMensFlair: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/434e47f6e486.jpg",
   boutiqueDries: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/aa0ec3a72999.jpg",
   boutiqueYelp: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9f1700496bff.jpg",
   boutiqueAlamy: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/eb81c9568e8f.jpg",
@@ -41,8 +38,6 @@ const STOCK = {
   accTimeResistance: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8c32cc2e45da.jpg",
   accLATimes: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a3f0337ee542.jpg",
   portraitDeposit1: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6f4d7cf64eb8.jpg",
-  portraitDeposit2: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0336fe60070d.jpg",
-  portraitAlamy: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e54216f6ec17.jpg",
   portraitUnsplash: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5ffca29e8ccd.jpg",
   outerwearForbes: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/49f798b28167.jpg",
   outerwearIsigny: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3c54954114e2.jpg",
@@ -242,22 +237,6 @@ export const collections: Collection[] = [
     alt: STOCK.boutiqueCali,
     productCount: 9,
   },
-];
-
-export const editorial = [
-  { image: STOCK.portraitUnsplash, title: "The Quiet Confidence", caption: "AW26 Campaign — Look 04" },
-  { image: STOCK.portraitDeposit2, title: "Built to Last, Made to Move", caption: "AW26 Campaign — Look 11" },
-  { image: STOCK.streetMensFlair, title: "Layers, Light, Shadow", caption: "AW26 Campaign — Look 07" },
-  { image: STOCK.outerwearForbes, title: "The Long Line", caption: "AW26 Campaign — Look 02" },
-];
-
-export const lookbook = [
-  { image: STOCK.portraitUnsplash, label: "Look 01 — The Coat" },
-  { image: STOCK.streetWwd, label: "Look 02 — The Knit" },
-  { image: NILEX_SNEAKER_OLIVE, label: "Look 03 — The Footwear" },
-  { image: STOCK.streetMensFlair, label: "Look 04 — The Street" },
-  { image: STOCK.outerwearSwitchback, label: "Look 05 — The Field" },
-  { image: STOCK.portraitDeposit2, label: "Look 06 — The Portrait" },
 ];
 
 export const testimonials = [
