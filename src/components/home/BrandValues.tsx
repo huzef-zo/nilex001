@@ -1,6 +1,6 @@
 /**
  * BrandValues — 4 column values grid with hover-reveal.
- * Combined with a final CTA to book an appointment.
+ * Combined with a final CTA to get in touch.
  */
 "use client";
 
@@ -80,19 +80,17 @@ export default function BrandValues() {
         <div className="relative mt-16 overflow-hidden rounded-sm bg-nilex-navy-soft lg:mt-24">
           <div className="grid items-center gap-8 lg:grid-cols-[1.5fr_1fr]">
             <div className="p-10 lg:p-16">
-              <SectionLabel>Private Appointment</SectionLabel>
+              <SectionLabel>Get In Touch</SectionLabel>
               <h3 className="mt-5 font-display text-3xl font-medium leading-tight text-nilex-cream md:text-4xl lg:text-5xl">
-                Visit the atelier. Sit with the cutter. <em className="italic text-nilex-gold">Build your wardrobe</em>.
+                Have a question? <em className="italic text-nilex-gold">We&apos;d love to hear from you.</em>
               </h3>
               <p className="mt-6 max-w-md text-base leading-relaxed text-nilex-cream/60">
-                Private appointments run Monday through Saturday at our Savile Row
-                atelier. A 90-minute session with one of our senior cutters —
-                measurements, fabric selection, and a discussion of what you wear
-                and how you live in it.
+                Reach out about sizing, fabric, or anything else — we read every
+                message personally and get back to you quickly.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <MagneticButton onClick={() => setPage("contact")} variant="primary">
-                  Book an Appointment
+                  Get in Touch
                 </MagneticButton>
                 <MagneticButton onClick={() => setPage("about")} variant="outline">
                   The Atelier Story

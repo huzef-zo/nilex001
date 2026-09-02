@@ -7,10 +7,9 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useNilex } from "@/store/navigation";
-import { navItems, products } from "@/lib/data";
+import { navItems } from "@/lib/data";
 import { Menu, X, Search } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import { scrollTo } from "./SmoothScrollProvider";
 
 export default function Navbar() {
   const page = useNilex((s) => s.page);
@@ -148,9 +147,8 @@ export default function Navbar() {
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="mt-12 space-y-3 text-sm text-white/60"
               >
-                <p className="uppercase tracking-luxe text-nilex-gold/80">Atelier · By appointment</p>
-                <p>14 Savile Row, London W1S 3PR</p>
-                <p>+44 20 7946 0958</p>
+                <p className="uppercase tracking-luxe text-nilex-gold/80">Bishoftu, Ethiopia</p>
+                <p>Address coming soon</p>
                 <p className="pt-2 text-white/40">Mon — Sat · 10:00 — 19:00</p>
               </motion.div>
             </div>

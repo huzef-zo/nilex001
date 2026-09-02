@@ -199,15 +199,14 @@ export default function AboutPage() {
             <div className="hidden lg:block">
               <div className="sticky top-32">
                 <p className="text-sm leading-relaxed text-nilex-cream/60">
-                  From a single room on Savile Row to nine cities worldwide.
-                  The pieces, the people, and the moments that built the house.
+                  A new house with big plans — get in touch to be part of the story from the start.
                 </p>
                 <MagneticButton
                   onClick={() => setPage("contact")}
                   variant="primary"
                   className="mt-8"
                 >
-                  Visit the Atelier
+                  Get in Touch
                 </MagneticButton>
               </div>
             </div>
@@ -314,17 +313,16 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="section-y px-6 lg:px-12">
         <div className="mx-auto max-w-4xl text-center">
-          <SectionLabel align="center">Visit the Atelier</SectionLabel>
+          <SectionLabel align="center">Get In Touch</SectionLabel>
           <h2 className="mt-6 font-display text-4xl font-medium leading-tight md:text-5xl lg:text-6xl">
             Come see how a Nilex piece is <em className="italic text-nilex-gold">made</em>.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-nilex-cream/60 md:text-lg">
-            Private appointments at Savile Row run Monday through Saturday.
-            A 90-minute session with one of our senior cutters.
+            Have questions about fit, fabric, or what&apos;s coming next? We&apos;d love to hear from you.
           </p>
           <div className="mt-10 flex justify-center">
             <MagneticButton onClick={() => setPage("contact")} variant="primary">
-              Book an Appointment
+              Get in Touch
             </MagneticButton>
           </div>
         </div>
