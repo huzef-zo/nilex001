@@ -141,7 +141,7 @@ export default function BrandStory() {
               />
               <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
                 <span className="text-xs uppercase tracking-luxe text-nilex-cream">
-                  The Atelier · Savile Row
+                  The Atelier · Bishoftu
                 </span>
                 <span className="font-mono text-xs text-nilex-cream/60">01</span>
               </div>

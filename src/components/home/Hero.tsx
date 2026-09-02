@@ -101,7 +101,7 @@ export default function Hero() {
           <span>AW26 — The Quiet Confidence</span>
         </div>
         <div className="hidden text-xs uppercase tracking-luxe text-nilex-cream/40 md:block">
-          Vol. I — IV · By appointment
+          Vol. I — IV
         </div>
       </div>
 

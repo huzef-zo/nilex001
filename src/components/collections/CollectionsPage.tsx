@@ -127,7 +127,7 @@ export default function CollectionsPage() {
                 <div className="mt-10 flex items-center justify-between border-t border-white/10 pt-6">
                   <div>
                     <p className="text-xs uppercase tracking-luxe text-nilex-cream/40">
-                      {c.productCount} pieces · By appointment
+                      {c.productCount} pieces
                     </p>
                   </div>
                   <div className="flex items-center gap-3">
