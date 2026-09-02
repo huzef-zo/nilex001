@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { collections, editorial, lookbook, STOCK_IMAGES } from "@/lib/data";
+import { collections, STOCK_IMAGES } from "@/lib/data";
 import SectionLabel from "@/components/shared/SectionLabel";
 import MagneticButton from "@/components/shared/MagneticButton";
 import { useNilex } from "@/store/navigation";
@@ -42,23 +42,6 @@ export default function CollectionsPage() {
           }
         );
       });
-      gsap.fromTo(
-        ".ed-card",
-        { y: 60, opacity: 0, scale: 0.96 },
-        {
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          duration: 1,
-          ease: "power3.out",
-          stagger: 0.08,
-          scrollTrigger: {
-            trigger: ".ed-grid",
-            start: "top 85%",
-            toggleActions: "play none none none",
-          },
-        }
-      );
     }, root);
     return () => ctx.revert();
   }, []);
@@ -82,7 +65,7 @@ export default function CollectionsPage() {
       </div>
 
       {/* Collection cards */}
-      <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
+      <div className="mx-auto max-w-[1600px] px-6 pb-24 lg:px-12 lg:pb-32">
         <div className="space-y-6 lg:space-y-12">
           {collections.map((c, i) => (
             <article
@@ -139,79 +122,6 @@ export default function CollectionsPage() {
               </div>
             </article>
           ))}
-        </div>
-      </div>
-
-      {/* Editorial gallery */}
-      <div className="mx-auto max-w-[1600px] px-6 py-24 lg:px-12 lg:py-32">
-        <div className="mb-10 flex items-end justify-between">
-          <div>
-            <SectionLabel>The AW26 Campaign</SectionLabel>
-            <h2 className="mt-5 font-display text-3xl font-medium md:text-4xl lg:text-5xl">
-              Stills from the <em className="italic text-nilex-gold">campaign</em>.
-            </h2>
-          </div>
-          <span className="font-mono text-xs text-nilex-cream/40">04 looks</span>
-        </div>
-        <div className="ed-grid grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
-          {editorial.map((e, i) => (
-            <figure
-              key={i}
-              className={`ed-card group relative overflow-hidden ${
-                i === 0 ? "md:col-span-2 md:row-span-2" : ""
-              }`}
-            >
-              <div className={`relative overflow-hidden ${i === 0 ? "aspect-square md:aspect-[4/5]" : "aspect-[3/4]"}`}>
-                <Image
-                  src={e.image}
-                  alt={e.title}
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-nilex-navy-deep/80 to-transparent" />
-                <figcaption className="absolute bottom-0 left-0 right-0 p-5">
-                  <p className="text-[10px] uppercase tracking-luxe text-nilex-gold">
-                    {e.caption}
-                  </p>
-                  <p className="mt-1 font-display text-xl text-nilex-cream md:text-2xl">
-                    {e.title}
-                  </p>
-                </figcaption>
-              </div>
-            </figure>
-          ))}
-        </div>
-      </div>
-
-      {/* Lookbook strip */}
-      <div className="bg-nilex-navy px-6 py-20 lg:px-12 lg:py-24">
-        <div className="mx-auto max-w-[1600px]">
-          <div className="mb-10 flex items-end justify-between">
-            <div>
-              <SectionLabel>The Lookbook</SectionLabel>
-              <h2 className="mt-5 font-display text-3xl font-medium md:text-4xl">
-                Six looks, <em className="italic text-nilex-gold">every angle</em>.
-              </h2>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-6">
-            {lookbook.map((look, i) => (
-              <div key={i} className="group relative aspect-[3/4] overflow-hidden">
-                <Image
-                  src={look.image}
-                  alt={look.label}
-                  fill
-                  sizes="(max-width: 768px) 50vw, 16vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-nilex-navy-deep/30 opacity-0 transition-opacity group-hover:opacity-100" />
-                <p className="absolute bottom-3 left-3 text-[10px] uppercase tracking-luxe text-nilex-cream opacity-0 transition-opacity group-hover:opacity-100">
-                  Look 0{i + 1}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </main>
