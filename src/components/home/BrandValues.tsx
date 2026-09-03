@@ -93,14 +93,14 @@ export default function BrandValues() {
                   Get in Touch
                 </MagneticButton>
                 <MagneticButton onClick={() => setPage("about")} variant="outline">
-                  The Atelier Story
+                  Our Story
                 </MagneticButton>
               </div>
             </div>
             <div className="relative h-64 w-full overflow-hidden lg:h-full lg:min-h-[420px]">
               <Image
                 src={STOCK_IMAGES.boutiqueYelp}
-                alt="Nilex atelier interior"
+                alt="Nilex boutique interior"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"

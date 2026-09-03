@@ -9,7 +9,6 @@ export default function Marquee() {
     "Outerwear engineered for the city",
     "Footwear built to last",
     "Accessories in full-grain leather",
-    "Made in our atelier",
     "Quietly modern",
     "Considered design",
   ];
