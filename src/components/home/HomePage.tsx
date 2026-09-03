@@ -8,7 +8,6 @@ import Marquee from "@/components/home/Marquee";
 import FeaturedCollections from "@/components/home/FeaturedCollections";
 import NewArrivals from "@/components/home/NewArrivals";
 import EditorialSplit from "@/components/home/EditorialSplit";
-import BrandStory from "@/components/home/BrandStory";
 import Testimonials from "@/components/home/Testimonials";
 import BrandValues from "@/components/home/BrandValues";
 
@@ -20,7 +19,6 @@ export default function HomePage() {
       <FeaturedCollections />
       <NewArrivals />
       <EditorialSplit />
-      <BrandStory />
       <Testimonials />
       <BrandValues />
     </main>
