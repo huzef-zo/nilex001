@@ -5,10 +5,10 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { brandValues, STOCK_IMAGES } from "@/lib/data";
+import { brandValues } from "@/lib/data";
+import PlaceholderImage from "@/components/shared/PlaceholderImage";
 import SectionLabel from "@/components/shared/SectionLabel";
 import MagneticButton from "@/components/shared/MagneticButton";
 import { useNilex } from "@/store/navigation";
@@ -98,13 +98,7 @@ export default function BrandValues() {
               </div>
             </div>
             <div className="relative h-64 w-full overflow-hidden lg:h-full lg:min-h-[420px]">
-              <Image
-                src={STOCK_IMAGES.boutiqueYelp}
-                alt="Nilex boutique interior"
-                fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover"
-              />
+              <PlaceholderImage className="absolute inset-0 h-full w-full" />
               <div className="absolute inset-0 bg-gradient-to-r from-nilex-navy-soft via-transparent to-transparent lg:bg-gradient-to-r" />
             </div>
           </div>

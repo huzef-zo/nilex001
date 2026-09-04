@@ -8,7 +8,8 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { STOCK_IMAGES, NILEX_SNEAKER_OLIVE } from "@/lib/data";
+import { NILEX_SNEAKER_OLIVE } from "@/lib/data";
+import PlaceholderImage from "@/components/shared/PlaceholderImage";
 import SectionLabel from "@/components/shared/SectionLabel";
 
 if (typeof window !== "undefined") {
@@ -67,13 +68,7 @@ export default function EditorialSplit() {
       {/* Block 1 — image left, copy right */}
       <div className="grid items-stretch lg:grid-cols-2">
         <div className="ed-img relative aspect-[4/5] overflow-hidden lg:aspect-auto lg:min-h-[80vh]">
-          <Image
-            src={STOCK_IMAGES.streetWwd}
-            alt="AW26 editorial"
-            fill
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
-          />
+          <PlaceholderImage className="absolute inset-0 h-full w-full" />
         </div>
         <div className="ed-copy flex items-center bg-nilex-navy px-8 py-16 lg:px-16 lg:py-24">
           <div className="max-w-md">

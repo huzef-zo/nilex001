@@ -28,21 +28,21 @@ const NILEX_SNEAKER_BLACK = "/images/products/nilex-sneaker-black.jpg";
 
 // Stock photo URLs (OSS-hosted by ZAI image search)
 const STOCK = {
-  streetWwd: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9f8439fcda9c.jpg",
-  boutiqueDries: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/aa0ec3a72999.jpg",
-  boutiqueYelp: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9f1700496bff.jpg",
-  boutiqueAlamy: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/eb81c9568e8f.jpg",
-  boutiqueCali: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ea48ec008e4e.jpg",
-  accAlamy: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/421277977f17.jpg",
-  accPopov: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d17b18940683.jpg",
-  accTimeResistance: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8c32cc2e45da.jpg",
-  accLATimes: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a3f0337ee542.jpg",
-  portraitDeposit1: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6f4d7cf64eb8.jpg",
-  portraitUnsplash: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5ffca29e8ccd.jpg",
-  outerwearForbes: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/49f798b28167.jpg",
-  outerwearIsigny: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3c54954114e2.jpg",
-  outerwearHypebeast: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8d650c055fed.jpg",
-  outerwearSwitchback: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a6d84d81b167.jpeg",
+  streetWwd: "",
+  boutiqueDries: "",
+  boutiqueYelp: "",
+  boutiqueAlamy: "",
+  boutiqueCali: "",
+  accAlamy: "",
+  accPopov: "",
+  accTimeResistance: "",
+  accLATimes: "",
+  portraitDeposit1: "",
+  portraitUnsplash: "",
+  outerwearForbes: "",
+  outerwearIsigny: "",
+  outerwearHypebeast: "",
+  outerwearSwitchback: "",
 };
 
 export const STOCK_IMAGES = STOCK;
