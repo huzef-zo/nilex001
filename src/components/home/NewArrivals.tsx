@@ -9,6 +9,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { products } from "@/lib/data";
+import PlaceholderImage from "@/components/shared/PlaceholderImage";
 import SectionLabel from "@/components/shared/SectionLabel";
 import { useNilex } from "@/store/navigation";
 import { Eye } from "lucide-react";
@@ -85,21 +86,29 @@ export default function NewArrivals() {
               }}
             >
               <div className="relative aspect-[3/4] overflow-hidden bg-nilex-navy/5">
-                <Image
-                  src={p.image}
-                  alt={p.name}
-                  fill
-                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
-                />
-                {p.hoverImage && (
+                {p.image ? (
                   <Image
-                    src={p.hoverImage}
-                    alt={`${p.name} alternate view`}
+                    src={p.image}
+                    alt={p.name}
                     fill
                     sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
                   />
+                ) : (
+                  <PlaceholderImage className="absolute inset-0 h-full w-full" />
+                )}
+                {p.hoverImage && (
+                  p.hoverImage ? (
+                    <Image
+                      src={p.hoverImage}
+                      alt={`${p.name} alternate view`}
+                      fill
+                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    />
+                  ) : (
+                    <PlaceholderImage className="absolute inset-0 h-full w-full opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  )
                 )}
 
                 {/* Badge */}

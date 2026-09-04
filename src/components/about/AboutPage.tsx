@@ -5,10 +5,10 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { STOCK_IMAGES, brandValues, stats } from "@/lib/data";
+import { brandValues, stats } from "@/lib/data";
+import PlaceholderImage from "@/components/shared/PlaceholderImage";
 import SectionLabel from "@/components/shared/SectionLabel";
 import MagneticButton from "@/components/shared/MagneticButton";
 import { useNilex } from "@/store/navigation";
@@ -118,14 +118,7 @@ export default function AboutPage() {
     <main ref={root} className="relative z-10 bg-nilex-navy-deep pt-32 text-nilex-cream lg:pt-40">
       {/* Hero */}
       <section className="about-hero relative h-[70vh] min-h-[500px] w-full overflow-hidden">
-        <Image
-          src={STOCK_IMAGES.boutiqueDries}
-          alt="The Nilex atelier"
-          fill
-          sizes="100vw"
-          className="about-hero-img object-cover"
-          priority
-        />
+        <PlaceholderImage className="about-hero-img absolute inset-0 h-full w-full" />
         <div className="absolute inset-0 bg-gradient-to-b from-nilex-navy-deep/40 via-transparent to-nilex-navy-deep" />
         <div className="absolute inset-0 flex items-center">
           <div className="mx-auto w-full max-w-[1600px] px-6 lg:px-12">
@@ -271,40 +264,16 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-12 md:gap-6">
             <div className="relative col-span-2 aspect-[16/10] overflow-hidden md:col-span-7">
-              <Image
-                src={STOCK_IMAGES.boutiqueAlamy}
-                alt="Atelier cutting room"
-                fill
-                sizes="(max-width: 768px) 100vw, 58vw"
-                className="object-cover"
-              />
+              <PlaceholderImage className="absolute inset-0 h-full w-full" />
             </div>
             <div className="relative col-span-1 aspect-[3/4] overflow-hidden md:col-span-5">
-              <Image
-                src={STOCK_IMAGES.portraitDeposit1}
-                alt="The maker"
-                fill
-                sizes="(max-width: 768px) 50vw, 42vw"
-                className="object-cover"
-              />
+              <PlaceholderImage className="absolute inset-0 h-full w-full" />
             </div>
             <div className="relative col-span-1 aspect-[3/4] overflow-hidden md:col-span-5">
-              <Image
-                src={STOCK_IMAGES.accTimeResistance}
-                alt="Leather detailing"
-                fill
-                sizes="(max-width: 768px) 50vw, 42vw"
-                className="object-cover"
-              />
+              <PlaceholderImage className="absolute inset-0 h-full w-full" />
             </div>
             <div className="relative col-span-2 aspect-[16/10] overflow-hidden md:col-span-7">
-              <Image
-                src={STOCK_IMAGES.portraitUnsplash}
-                alt="The Nilex man"
-                fill
-                sizes="(max-width: 768px) 100vw, 58vw"
-                className="object-cover"
-              />
+              <PlaceholderImage className="absolute inset-0 h-full w-full" />
             </div>
           </div>
         </div>

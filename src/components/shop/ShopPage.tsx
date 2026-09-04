@@ -9,6 +9,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { products, Product } from "@/lib/data";
+import PlaceholderImage from "@/components/shared/PlaceholderImage";
 import SectionLabel from "@/components/shared/SectionLabel";
 import { AnimatePresence, motion } from "framer-motion";
 import { SlidersHorizontal, X, Check } from "lucide-react";
@@ -194,13 +195,17 @@ export default function ShopPage() {
                   onClick={() => openQuickView(p)}
                 >
                   <div className="relative aspect-[3/4] overflow-hidden bg-nilex-navy/5">
-                    <Image
-                      src={p.image}
-                      alt={p.name}
-                      fill
-                      sizes="(max-width: 768px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
-                    />
+                    {p.image ? (
+                      <Image
+                        src={p.image}
+                        alt={p.name}
+                        fill
+                        sizes="(max-width: 768px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
+                      />
+                    ) : (
+                      <PlaceholderImage className="absolute inset-0 h-full w-full" />
+                    )}
                     {p.badge && (
                       <span className="absolute left-3 top-3 rounded-full bg-nilex-navy px-3 py-1 text-[10px] uppercase tracking-luxe text-nilex-cream">
                         {p.badge}
@@ -275,13 +280,17 @@ export default function ShopPage() {
             >
               <div className="grid md:grid-cols-2">
                 <div className="relative aspect-[3/4] md:aspect-auto md:min-h-[560px]">
-                  <Image
-                    src={quickView.image}
-                    alt={quickView.name}
-                    fill
-                    sizes="(max-width: 768px) 94vw, 400px"
-                    className="object-cover"
-                  />
+                  {quickView.image ? (
+                    <Image
+                      src={quickView.image}
+                      alt={quickView.name}
+                      fill
+                      sizes="(max-width: 768px) 94vw, 400px"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <PlaceholderImage className="absolute inset-0 h-full w-full" />
+                  )}
                 </div>
                 <div className="flex flex-col p-8 lg:p-10">
                   <button

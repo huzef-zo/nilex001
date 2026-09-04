@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { collections, STOCK_IMAGES } from "@/lib/data";
+import { collections } from "@/lib/data";
 import SectionLabel from "@/components/shared/SectionLabel";
 import MagneticButton from "@/components/shared/MagneticButton";
 import { useNilex } from "@/store/navigation";
