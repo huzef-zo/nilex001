@@ -68,7 +68,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="mb-5 text-xs uppercase tracking-luxe text-nilex-gold/80">Location</p>
+            <p className="mb-5 text-xs uppercase tracking-luxe text-nilex-gold/80">Visit Us</p>
             <p className="text-sm leading-relaxed text-white/70">
               Bishoftu, Ethiopia<br />
               Address coming soon

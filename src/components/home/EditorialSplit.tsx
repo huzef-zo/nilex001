@@ -85,7 +85,7 @@ export default function EditorialSplit() {
               Volume III takes the house signatures into the city. Sculpted
               sneakers in bone suede, technical parkas with taped seams, and knit
               hoodies in extra-fine merino — engineered for the street, finished
-              with atelier craft.
+              with house craft.
             </p>
             <p className="mt-6 text-base leading-relaxed text-nilex-cream/70">
               Engineered fabrics, considered silhouettes, and the same quiet
