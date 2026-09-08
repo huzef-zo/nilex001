@@ -145,11 +145,14 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
-                className="mt-12 space-y-3 text-sm text-white/60"
+                className="mt-12 space-y-2 text-sm text-white/60"
               >
-                <p className="uppercase tracking-luxe text-nilex-gold/80">Bishoftu, Ethiopia</p>
-                <p>Address coming soon</p>
-                <p className="pt-2 text-white/40">Mon — Sat · 10:00 — 19:00</p>
+                <p className="uppercase tracking-luxe text-nilex-gold/80">Bishoftu, Next to Farmi Cafe</p>
+                <p>
+                  <a href="tel:0980818485" className="transition-colors hover:text-nilex-gold">
+                    0980818485
+                  </a>
+                </p>
               </motion.div>
             </div>
           </motion.div>
