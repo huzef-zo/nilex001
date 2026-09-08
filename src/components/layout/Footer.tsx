@@ -70,11 +70,24 @@ export default function Footer() {
           <div>
             <p className="mb-5 text-xs uppercase tracking-luxe text-nilex-gold/80">Visit Us</p>
             <p className="text-sm leading-relaxed text-white/70">
-              Bishoftu, Ethiopia<br />
-              Address coming soon
+              Bishoftu, Next to Farmi Cafe
             </p>
-            <p className="mt-4 text-xs text-white/40">
-              Mon — Sat · 10:00 — 19:00
+            <p className="mt-3 text-sm text-white/70">
+              Phone:{" "}
+              <a href="tel:0980818485" className="transition-colors hover:text-nilex-gold">
+                0980818485
+              </a>
+            </p>
+            <p className="mt-2 text-sm text-white/70">
+              Order:{" "}
+              <a
+                href="https://t.me/ezana62"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-nilex-gold"
+              >
+                @ezana62 (Telegram)
+              </a>
             </p>
           </div>
         </div>
@@ -82,7 +95,25 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 py-6 text-xs text-white/50 md:flex-row">
           <p>© {currentYear} Nilex Fashion House. All rights reserved.</p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-6">
+            <a
+              href="https://t.me/nilexfashionn"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor="hover"
+              className="link-underline hover:text-nilex-gold"
+            >
+              Telegram Channel
+            </a>
+            <a
+              href="https://www.tiktok.com/@nilexfashion1"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor="hover"
+              className="link-underline hover:text-nilex-gold"
+            >
+              TikTok
+            </a>
             <button data-cursor="hover" className="link-underline hover:text-nilex-gold">Privacy</button>
             <button data-cursor="hover" className="link-underline hover:text-nilex-gold">Terms</button>
             <button data-cursor="hover" className="link-underline hover:text-nilex-gold">Cookies</button>
