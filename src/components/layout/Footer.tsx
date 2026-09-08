@@ -7,7 +7,7 @@
 import Image from "next/image";
 import { useNilex } from "@/store/navigation";
 import { navItems } from "@/lib/data";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, MapPin, Phone, Send, Music2 } from "lucide-react";
 import { scrollTo } from "./SmoothScrollProvider";
 
 export default function Footer() {
@@ -69,26 +69,67 @@ export default function Footer() {
 
           <div>
             <p className="mb-5 text-xs uppercase tracking-luxe text-nilex-gold/80">Visit Us</p>
-            <p className="text-sm leading-relaxed text-white/70">
-              Bishoftu, Next to Farmi Cafe
-            </p>
-            <p className="mt-3 text-sm text-white/70">
-              Phone:{" "}
-              <a href="tel:0980818485" className="transition-colors hover:text-nilex-gold">
-                0980818485
-              </a>
-            </p>
-            <p className="mt-2 text-sm text-white/70">
-              Order:{" "}
-              <a
-                href="https://t.me/ezana62"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-colors hover:text-nilex-gold"
-              >
-                @ezana62 (Telegram)
-              </a>
-            </p>
+            <ul className="space-y-3.5 text-sm text-white/70">
+              <li>
+                <a
+                  href="https://maps.app.goo.gl/r3yCgR7Ek4SWK1767?g_st=atm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cursor="hover"
+                  className="inline-flex items-center gap-2.5 link-underline transition-colors hover:text-nilex-gold"
+                >
+                  <MapPin className="h-4 w-4 shrink-0 text-nilex-gold" />
+                  <span>Bishoftu, Next to Farmi Cafe</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:0980818485"
+                  data-cursor="hover"
+                  className="inline-flex items-center gap-2.5 link-underline transition-colors hover:text-nilex-gold"
+                >
+                  <Phone className="h-4 w-4 shrink-0 text-nilex-gold" />
+                  <span>0980818485</span>
+                </a>
+              </li>
+              <li>
+                <div className="flex items-start gap-2.5">
+                  <Send className="mt-0.5 h-4 w-4 shrink-0 text-nilex-gold" />
+                  <div className="flex flex-col gap-1.5">
+                    <a
+                      href="https://t.me/ezana62"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-cursor="hover"
+                      className="inline-block link-underline transition-colors hover:text-nilex-gold"
+                    >
+                      Order via Telegram — @ezana62
+                    </a>
+                    <a
+                      href="https://t.me/nilexfashionn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-cursor="hover"
+                      className="inline-block link-underline transition-colors hover:text-nilex-gold"
+                    >
+                      Telegram Channel
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="https://www.tiktok.com/@nilexfashion1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cursor="hover"
+                  className="inline-flex items-center gap-2.5 link-underline transition-colors hover:text-nilex-gold"
+                >
+                  <Music2 className="h-4 w-4 shrink-0 text-nilex-gold" />
+                  <span>@nilexfashion1</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
