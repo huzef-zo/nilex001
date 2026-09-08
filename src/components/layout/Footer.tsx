@@ -7,7 +7,8 @@
 import Image from "next/image";
 import { useNilex } from "@/store/navigation";
 import { navItems } from "@/lib/data";
-import { ArrowUp, MapPin, Phone, Send, Music2 } from "lucide-react";
+import { ArrowUp, MapPin, Phone } from "lucide-react";
+import { TelegramIcon, TikTokIcon } from "@/components/shared/BrandIcons";
 import { scrollTo } from "./SmoothScrollProvider";
 
 export default function Footer() {
@@ -93,29 +94,28 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <div className="flex items-start gap-2.5">
-                  <Send className="mt-0.5 h-4 w-4 shrink-0 text-nilex-gold" />
-                  <div className="flex flex-col gap-1.5">
-                    <a
-                      href="https://t.me/ezana62"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-cursor="hover"
-                      className="inline-block link-underline transition-colors hover:text-nilex-gold"
-                    >
-                      Order via Telegram — @ezana62
-                    </a>
-                    <a
-                      href="https://t.me/nilexfashionn"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-cursor="hover"
-                      className="inline-block link-underline transition-colors hover:text-nilex-gold"
-                    >
-                      Telegram Channel
-                    </a>
-                  </div>
-                </div>
+                <a
+                  href="https://t.me/ezana62"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cursor="hover"
+                  className="inline-flex items-center gap-2.5 link-underline transition-colors hover:text-nilex-gold"
+                >
+                  <TelegramIcon className="h-4 w-4 shrink-0 text-nilex-gold" />
+                  <span>Order via Telegram — @ezana62</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://t.me/nilexfashionn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cursor="hover"
+                  className="inline-flex items-center gap-2.5 link-underline transition-colors hover:text-nilex-gold"
+                >
+                  <TelegramIcon className="h-4 w-4 shrink-0 text-nilex-gold" />
+                  <span>Telegram Channel</span>
+                </a>
               </li>
               <li>
                 <a
@@ -125,7 +125,7 @@ export default function Footer() {
                   data-cursor="hover"
                   className="inline-flex items-center gap-2.5 link-underline transition-colors hover:text-nilex-gold"
                 >
-                  <Music2 className="h-4 w-4 shrink-0 text-nilex-gold" />
+                  <TikTokIcon className="h-4 w-4 shrink-0 text-nilex-gold" />
                   <span>@nilexfashion1</span>
                 </a>
               </li>
