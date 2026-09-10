@@ -117,11 +117,6 @@ export default function NewArrivals() {
                     {p.badge}
                   </span>
                 )}
-                {p.compareAt && (
-                  <span className="absolute right-3 top-3 rounded-full bg-nilex-gold px-3 py-1 text-[10px] uppercase tracking-luxe text-nilex-navy">
-                    Save ${p.compareAt - p.price}
-                  </span>
-                )}
 
                 {/* Quick actions */}
                 <div className="absolute inset-x-0 bottom-0 translate-y-full opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
@@ -147,14 +142,6 @@ export default function NewArrivals() {
                   <p className="text-[10px] text-nilex-navy/50">{p.colorway}</p>
                 </div>
                 <h3 className="text-base font-medium leading-tight">{p.name}</h3>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-sm font-semibold tabular-nums">${p.price}</span>
-                  {p.compareAt && (
-                    <span className="text-xs text-nilex-navy/40 line-through tabular-nums">
-                      ${p.compareAt}
-                    </span>
-                  )}
-                </div>
               </div>
             </article>
           ))}

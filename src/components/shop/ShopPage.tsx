@@ -21,8 +21,6 @@ if (typeof window !== "undefined") {
 const categories = ["All", "Knitwear", "Footwear", "Outerwear", "Accessories"] as const;
 const sortOptions = [
   { value: "newest", label: "Newest" },
-  { value: "price-asc", label: "Price: Low to High" },
-  { value: "price-desc", label: "Price: High to Low" },
   { value: "name", label: "A — Z" },
 ] as const;
 
@@ -31,26 +29,19 @@ export default function ShopPage() {
 
   const [category, setCategory] = useState<(typeof categories)[number]>("All");
   const [sort, setSort] = useState<(typeof sortOptions)[number]["value"]>("newest");
-  const [priceMax, setPriceMax] = useState(1000);
   const [quickView, setQuickView] = useState<Product | null>(null);
   const [selectedSize, setSelectedSize] = useState<string>("");
 
   const filtered = useMemo(() => {
-    let list = products.filter((p) => p.price <= priceMax);
+    let list = products;
     if (category !== "All") list = list.filter((p) => p.category === category);
     switch (sort) {
-      case "price-asc":
-        list = [...list].sort((a, b) => a.price - b.price);
-        break;
-      case "price-desc":
-        list = [...list].sort((a, b) => b.price - a.price);
-        break;
       case "name":
         list = [...list].sort((a, b) => a.name.localeCompare(b.name));
         break;
     }
     return list;
-  }, [category, sort, priceMax]);
+  }, [category, sort]);
 
   useEffect(() => {
     if (!root.current) return;
@@ -138,25 +129,6 @@ export default function ShopPage() {
 
             <div className="mt-8 border-t border-nilex-navy/10 pt-6">
               <p className="mb-3 text-xs uppercase tracking-luxe text-nilex-navy/40">
-                Max Price
-              </p>
-              <input
-                type="range"
-                min={100}
-                max={1000}
-                step={50}
-                value={priceMax}
-                onChange={(e) => setPriceMax(Number(e.target.value))}
-                className="w-full accent-nilex-gold"
-              />
-              <div className="mt-2 flex justify-between text-xs text-nilex-navy/60">
-                <span>$100</span>
-                <span className="font-semibold text-nilex-navy">${priceMax}</span>
-              </div>
-            </div>
-
-            <div className="mt-8 border-t border-nilex-navy/10 pt-6">
-              <p className="mb-3 text-xs uppercase tracking-luxe text-nilex-navy/40">
                 Sort by
               </p>
               <ul className="space-y-2">
@@ -230,7 +202,6 @@ export default function ShopPage() {
                     </p>
                     <h3 className="text-base font-medium">{p.name}</h3>
                     <p className="text-xs text-nilex-navy/50">{p.colorway}</p>
-                    <p className="mt-1 text-sm font-semibold tabular-nums">${p.price}</p>
                   </div>
                 </article>
               ))}
@@ -242,13 +213,12 @@ export default function ShopPage() {
                   No pieces match those filters.
                 </p>
                 <p className="text-sm text-nilex-navy/60">
-                  Try widening your price range or choosing a different category.
+                  Try choosing a different category.
                 </p>
                 <button
                   data-cursor="hover"
                   onClick={() => {
                     setCategory("All");
-                    setPriceMax(1000);
                   }}
                   className="mt-2 border border-nilex-navy/20 px-6 py-2.5 text-xs uppercase tracking-luxe text-nilex-navy transition-colors hover:border-nilex-gold hover:text-nilex-gold"
                 >
@@ -308,14 +278,6 @@ export default function ShopPage() {
                   <h3 className="mt-3 font-display text-3xl font-medium">
                     {quickView.name}
                   </h3>
-                  <div className="mt-2 flex items-baseline gap-2">
-                    <span className="text-2xl font-semibold tabular-nums">${quickView.price}</span>
-                    {quickView.compareAt && (
-                      <span className="text-sm text-nilex-navy/40 line-through">
-                        ${quickView.compareAt}
-                      </span>
-                    )}
-                  </div>
 
                   <p className="mt-6 text-sm leading-relaxed text-nilex-navy/70">
                     {quickView.description}
