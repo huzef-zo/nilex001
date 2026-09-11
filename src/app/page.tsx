@@ -46,7 +46,7 @@ export default function Page() {
       {/* Persistent 3D canvas (spec §3a) */}
       <Scene3D visible={show3D} />
 
-      <div className="relative flex min-h-screen flex-col">
+      <div className="relative flex min-h-screen flex-col w-full max-w-full overflow-x-hidden">
         <Navbar />
 
         {/* AnimatePresence drives the page transition */}
@@ -57,7 +57,7 @@ export default function Page() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="flex-1"
+            className="flex-1 w-full max-w-full overflow-x-hidden"
           >
             {page === "home" && <HomePage />}
             {page === "shop" && <ShopPage />}

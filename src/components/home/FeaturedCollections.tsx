@@ -86,27 +86,27 @@ export default function FeaturedCollections() {
   }, []);
 
   return (
-    <section ref={root} className="section-y relative z-10 bg-nilex-navy-deep px-6 lg:px-12">
+    <section ref={root} className="section-y relative z-10 w-full max-w-full overflow-hidden bg-nilex-navy-deep px-4 sm:px-6 lg:px-12">
       <div className="mx-auto max-w-[1600px]">
-        <div className="fc-header mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end lg:mb-20">
+        <div className="fc-header mb-10 sm:mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end lg:mb-20">
           <div>
             <SectionLabel>The House · AW26</SectionLabel>
-            <h2 className="mt-5 max-w-3xl font-display text-4xl font-medium leading-tight text-nilex-cream md:text-5xl lg:text-6xl">
+            <h2 className="mt-4 sm:mt-5 max-w-3xl font-display text-3xl sm:text-4xl font-medium leading-tight text-nilex-cream md:text-5xl lg:text-6xl">
               Four volumes, one <em className="italic text-nilex-gold">point of view</em>.
             </h2>
           </div>
-          <p className="max-w-sm text-sm leading-relaxed text-nilex-cream/60">
+          <p className="max-w-sm text-xs sm:text-sm leading-relaxed text-nilex-cream/60">
             Each season we release four small volumes — capsule collections that
             share a fabric story, a colour palette, and a single idea. Explore
             the volumes below.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
+        <div className="grid grid-cols-1 gap-6 overflow-hidden md:grid-cols-2 lg:gap-8">
           {collections.map((c, i) => (
             <article
               key={c.id}
-              className={`collection-card group relative overflow-hidden ${
+              className={`collection-card group relative w-full overflow-hidden ${
                 i % 2 === 0 ? "md:translate-y-0" : "md:translate-y-12"
               }`}
               data-cursor="hover"

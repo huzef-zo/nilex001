@@ -17,9 +17,9 @@ export default function Marquee() {
   return (
     <section
       id="nilex-marquee"
-      className="relative z-10 overflow-hidden border-y border-white/10 bg-nilex-navy py-6 text-nilex-cream"
+      className="relative z-10 w-full max-w-full overflow-hidden border-y border-white/10 bg-nilex-navy py-6 text-nilex-cream"
     >
-      <div className="flex whitespace-nowrap animate-marquee">
+      <div className="flex w-max whitespace-nowrap animate-marquee">
         {items.map((p, i) => (
           <div key={i} className="flex items-center">
             <span className="px-8 font-display text-2xl italic text-nilex-cream/80 md:text-3xl">
