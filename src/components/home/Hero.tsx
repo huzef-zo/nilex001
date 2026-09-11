@@ -83,7 +83,7 @@ export default function Hero() {
     <section
       id="nilex-hero"
       ref={rootRef}
-      className="relative flex min-h-screen w-full items-center overflow-hidden bg-noise-navy px-6 pt-24 lg:px-12"
+      className="relative flex min-h-screen w-full max-w-full flex-col justify-between overflow-hidden bg-noise-navy px-4 pb-20 pt-24 sm:px-6 lg:px-12"
     >
       {/* Background gradient wash (sits above the 3D canvas for depth) */}
       <div className="pointer-events-none absolute inset-0 z-[2]">
@@ -96,9 +96,9 @@ export default function Hero() {
 
       {/* Eyebrow + meta row */}
       <div className="hero-meta relative z-10 mx-auto flex w-full max-w-[1600px] items-center justify-between text-nilex-cream/60">
-        <div className="flex items-center gap-3 text-xs uppercase tracking-luxe">
-          <span className="h-px w-8 bg-nilex-gold/60" />
-          <span>AW26 — The Quiet Confidence</span>
+        <div className="flex items-center gap-2.5 text-[10px] uppercase tracking-luxe sm:gap-3 sm:text-xs">
+          <span className="h-px w-6 bg-nilex-gold/60 sm:w-8" />
+          <span className="truncate">AW26 — The Quiet Confidence</span>
         </div>
         <div className="hidden text-xs uppercase tracking-luxe text-nilex-cream/40 md:block">
           Vol. I — IV
@@ -106,9 +106,9 @@ export default function Hero() {
       </div>
 
       {/* Headline */}
-      <div className="hero-headline relative z-10 mx-auto w-full max-w-[1600px]">
-        <div className="mt-12 lg:mt-16">
-          <h1 className="font-display text-[clamp(2.75rem,9vw,9rem)] font-medium leading-[0.95] tracking-tight text-nilex-cream">
+      <div className="hero-headline relative z-10 mx-auto my-auto w-full max-w-[1600px] py-6 sm:py-10">
+        <div className="mt-4 sm:mt-8 lg:mt-12">
+          <h1 className="font-display text-[clamp(2rem,7.5vw,9rem)] font-medium leading-[1.02] sm:leading-[0.98] tracking-tight text-nilex-cream">
             <span className="block overflow-hidden">
               <span className="hero-word inline-block">Modern</span>
             </span>
@@ -125,18 +125,18 @@ export default function Hero() {
             </span>
           </h1>
 
-          <div className="mt-10 flex flex-col items-start gap-8 lg:flex-row lg:items-end lg:justify-between">
-            <p className="hero-fade max-w-md text-base leading-relaxed text-nilex-cream/70 md:text-lg">
+          <div className="mt-6 sm:mt-10 flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <p className="hero-fade max-w-md text-sm leading-relaxed text-nilex-cream/70 sm:text-base md:text-lg">
               Nilex Fashion House is a modern atelier — quietly luxurious knitwear,
               footwear, outerwear and accessories, made in honest materials and
               built to be worn for years, not seasons.
             </p>
 
-            <div className="hero-fade flex flex-col gap-4 sm:flex-row">
-              <MagneticButton onClick={() => setPage("shop")} variant="primary">
-                Explore the Collection
+            <div className="hero-fade flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+              <MagneticButton onClick={() => setPage("shop")} variant="primary" className="w-full sm:w-auto text-center">
+                Explore Collection
               </MagneticButton>
-              <MagneticButton onClick={() => setPage("collections")} variant="outline">
+              <MagneticButton onClick={() => setPage("collections")} variant="outline" className="w-full sm:w-auto text-center">
                 View Lookbook
               </MagneticButton>
             </div>
@@ -145,7 +145,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom row: scroll cue + featured mark */}
-      <div className="hero-meta absolute bottom-8 left-0 right-0 z-10 mx-auto flex max-w-[1600px] items-end justify-between px-6 lg:px-12">
+      <div className="hero-meta relative z-10 mx-auto flex w-full max-w-[1600px] items-end justify-between">
         <button
           data-cursor="hover"
           onClick={() => {

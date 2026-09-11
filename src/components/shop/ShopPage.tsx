@@ -74,81 +74,101 @@ export default function ShopPage() {
   };
 
   return (
-    <main ref={root} className="relative z-10 min-h-screen bg-nilex-cream pt-32 text-nilex-navy lg:pt-40">
-      <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
+    <main ref={root} className="relative z-10 min-h-screen bg-nilex-cream pt-24 pb-16 text-nilex-navy lg:pt-40">
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-12">
         {/* Header */}
-        <div className="mb-12 flex flex-col gap-6 border-b border-nilex-navy/10 pb-10 lg:mb-16 lg:flex-row lg:items-end lg:justify-between">
+        <div className="mb-8 sm:mb-12 flex flex-col gap-4 border-b border-nilex-navy/10 pb-8 sm:pb-10 lg:mb-16 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <SectionLabel>The Browse · All Pieces</SectionLabel>
-            <h1 className="mt-5 font-display text-5xl font-medium leading-tight md:text-6xl lg:text-7xl">
+            <h1 className="mt-4 font-display text-3xl sm:text-5xl font-medium leading-tight md:text-6xl lg:text-7xl">
               Every piece, <em className="italic">in one place</em>.
             </h1>
           </div>
-          <div className="max-w-md text-sm leading-relaxed text-nilex-navy/60">
+          <div className="max-w-md text-xs sm:text-sm leading-relaxed text-nilex-navy/60">
             The full Nilex collection — knitwear, footwear, outerwear
             and accessories. Filter by category, sort by price, and tap any
             piece for details, fabric and sizing.
           </div>
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-[260px_1fr] lg:gap-16">
+        <div className="grid gap-8 lg:grid-cols-[260px_1fr] lg:gap-16">
           {/* Filter sidebar */}
           <aside className="lg:sticky lg:top-32 lg:self-start">
             <div className="flex items-center gap-2 text-xs uppercase tracking-luxe text-nilex-navy/60">
               <SlidersHorizontal className="h-3.5 w-3.5" strokeWidth={1.5} />
-              Filter
+              Filter & Sort
             </div>
 
-            <div className="mt-6 border-t border-nilex-navy/10 pt-6">
-              <p className="mb-3 text-xs uppercase tracking-luxe text-nilex-navy/40">
-                Category
-              </p>
-              <ul className="space-y-2">
-                {categories.map((c) => (
-                  <li key={c}>
-                    <button
-                      data-cursor="hover"
-                      onClick={() => setCategory(c)}
-                      className={`flex w-full items-center justify-between py-1 text-sm transition-colors ${
-                        category === c
-                          ? "text-nilex-gold"
-                          : "text-nilex-navy/70 hover:text-nilex-navy"
-                      }`}
-                    >
-                      <span>{c}</span>
-                      <span className="font-mono text-xs text-nilex-navy/40">
-                        {c === "All"
-                          ? products.length
-                          : products.filter((p) => p.category === c).length}
-                      </span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
+            {/* Horizontal scrollable pills on mobile */}
+            <div className="mt-4 flex flex-wrap gap-2 lg:hidden">
+              {categories.map((c) => (
+                <button
+                  key={c}
+                  data-cursor="hover"
+                  onClick={() => setCategory(c)}
+                  className={`rounded-full border px-3 py-1.5 text-xs transition-colors ${
+                    category === c
+                      ? "border-nilex-navy bg-nilex-navy text-nilex-cream"
+                      : "border-nilex-navy/20 bg-transparent text-nilex-navy/70 hover:border-nilex-navy"
+                  }`}
+                >
+                  {c} ({c === "All" ? products.length : products.filter((p) => p.category === c).length})
+                </button>
+              ))}
             </div>
 
-            <div className="mt-8 border-t border-nilex-navy/10 pt-6">
-              <p className="mb-3 text-xs uppercase tracking-luxe text-nilex-navy/40">
-                Sort by
-              </p>
-              <ul className="space-y-2">
-                {sortOptions.map((o) => (
-                  <li key={o.value}>
-                    <button
-                      data-cursor="hover"
-                      onClick={() => setSort(o.value)}
-                      className={`flex w-full items-center justify-between py-1 text-sm transition-colors ${
-                        sort === o.value
-                          ? "text-nilex-gold"
-                          : "text-nilex-navy/70 hover:text-nilex-navy"
-                      }`}
-                    >
-                      {o.label}
-                      {sort === o.value && <Check className="h-3 w-3" />}
-                    </button>
-                  </li>
-                ))}
-              </ul>
+            <div className="hidden lg:block">
+              <div className="mt-6 border-t border-nilex-navy/10 pt-6">
+                <p className="mb-3 text-xs uppercase tracking-luxe text-nilex-navy/40">
+                  Category
+                </p>
+                <ul className="space-y-2">
+                  {categories.map((c) => (
+                    <li key={c}>
+                      <button
+                        data-cursor="hover"
+                        onClick={() => setCategory(c)}
+                        className={`flex w-full items-center justify-between py-1 text-sm transition-colors ${
+                          category === c
+                            ? "text-nilex-gold"
+                            : "text-nilex-navy/70 hover:text-nilex-navy"
+                        }`}
+                      >
+                        <span>{c}</span>
+                        <span className="font-mono text-xs text-nilex-navy/40">
+                          {c === "All"
+                            ? products.length
+                            : products.filter((p) => p.category === c).length}
+                        </span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-8 border-t border-nilex-navy/10 pt-6">
+                <p className="mb-3 text-xs uppercase tracking-luxe text-nilex-navy/40">
+                  Sort by
+                </p>
+                <ul className="space-y-2">
+                  {sortOptions.map((o) => (
+                    <li key={o.value}>
+                      <button
+                        data-cursor="hover"
+                        onClick={() => setSort(o.value)}
+                        className={`flex w-full items-center justify-between py-1 text-sm transition-colors ${
+                          sort === o.value
+                            ? "text-nilex-gold"
+                            : "text-nilex-navy/70 hover:text-nilex-navy"
+                        }`}
+                      >
+                        {o.label}
+                        {sort === o.value && <Check className="h-3 w-3" />}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
           </aside>
@@ -239,59 +259,58 @@ export default function ShopPage() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setQuickView(null)}
-              className="fixed inset-0 z-80 bg-black/70 backdrop-blur-sm"
+              className="fixed inset-0 z-[80] bg-black/70 backdrop-blur-sm"
             />
             <motion.div
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 60 }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="fixed left-1/2 top-1/2 z-90 w-[94vw] max-w-4xl -translate-x-1/2 -translate-y-1/2 overflow-hidden bg-nilex-cream text-nilex-navy"
+              className="fixed left-1/2 top-1/2 z-[90] max-h-[88vh] w-[92vw] max-w-4xl -translate-x-1/2 -translate-y-1/2 overflow-y-auto bg-nilex-cream text-nilex-navy shadow-2xl rounded-sm"
             >
-              <div className="grid md:grid-cols-2">
-                <div className="relative aspect-[3/4] md:aspect-auto md:min-h-[560px]">
+              <div className="relative grid md:grid-cols-2">
+                <button
+                  data-cursor="hover"
+                  onClick={() => setQuickView(null)}
+                  aria-label="Close"
+                  className="absolute right-3 top-3 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-nilex-cream/80 backdrop-blur-sm hover:bg-nilex-navy/10"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+                <div className="relative aspect-[3/4] md:aspect-auto md:min-h-[500px]">
                   {quickView.image ? (
                     <Image
                       src={quickView.image}
                       alt={quickView.name}
                       fill
-                      sizes="(max-width: 768px) 94vw, 400px"
+                      sizes="(max-width: 768px) 92vw, 400px"
                       className="object-cover"
                     />
                   ) : (
                     <PlaceholderImage className="absolute inset-0 h-full w-full" />
                   )}
                 </div>
-                <div className="flex flex-col p-8 lg:p-10">
-                  <button
-                    data-cursor="hover"
-                    onClick={() => setQuickView(null)}
-                    aria-label="Close"
-                    className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full hover:bg-nilex-navy/10"
-                  >
-                    <X className="h-5 w-5" />
-                  </button>
-
+                <div className="flex flex-col p-6 sm:p-8 lg:p-10">
                   <p className="text-[10px] uppercase tracking-luxe text-nilex-navy/40">
                     {quickView.category} · {quickView.colorway}
                   </p>
-                  <h3 className="mt-3 font-display text-3xl font-medium">
+                  <h3 className="mt-2 font-display text-2xl sm:text-3xl font-medium">
                     {quickView.name}
                   </h3>
 
-                  <p className="mt-6 text-sm leading-relaxed text-nilex-navy/70">
+                  <p className="mt-4 text-xs sm:text-sm leading-relaxed text-nilex-navy/70">
                     {quickView.description}
                   </p>
 
-                  <div className="mt-6 border-t border-nilex-navy/10 pt-5">
+                  <div className="mt-5 border-t border-nilex-navy/10 pt-4">
                     <p className="text-xs uppercase tracking-luxe text-nilex-navy/40">
                       Fabric
                     </p>
-                    <p className="mt-1 text-sm text-nilex-navy/70">{quickView.fabric}</p>
+                    <p className="mt-1 text-xs sm:text-sm text-nilex-navy/70">{quickView.fabric}</p>
                   </div>
 
-                  <div className="mt-6">
-                    <p className="mb-3 text-xs uppercase tracking-luxe text-nilex-navy/40">
+                  <div className="mt-5">
+                    <p className="mb-2 text-xs uppercase tracking-luxe text-nilex-navy/40">
                       Size {selectedSize && <span className="text-nilex-navy">· {selectedSize}</span>}
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -300,7 +319,7 @@ export default function ShopPage() {
                           key={s}
                           data-cursor="hover"
                           onClick={() => setSelectedSize(s)}
-                          className={`min-w-12 border px-3 py-2 text-xs uppercase tracking-luxe transition-colors ${
+                          className={`min-w-10 border px-3 py-1.5 text-xs uppercase tracking-luxe transition-colors ${
                             selectedSize === s
                               ? "border-nilex-navy bg-nilex-navy text-nilex-cream"
                               : "border-nilex-navy/20 text-nilex-navy hover:border-nilex-navy"

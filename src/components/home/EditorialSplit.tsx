@@ -66,23 +66,25 @@ export default function EditorialSplit() {
       className="relative z-10 bg-nilex-navy-deep"
     >
       {/* Block 1 — image left, copy right */}
-      <div className="grid items-stretch lg:grid-cols-2">
-        <div className="ed-img relative aspect-[4/5] overflow-hidden lg:aspect-auto lg:min-h-[80vh]">
-          <PlaceholderImage className="absolute inset-0 h-full w-full" />
+      <div className="grid items-stretch overflow-hidden lg:grid-cols-2">
+        <div className="overflow-hidden">
+          <div className="ed-img relative aspect-[4/5] w-full overflow-hidden lg:aspect-auto lg:min-h-[80vh]">
+            <PlaceholderImage className="absolute inset-0 h-full w-full" />
+          </div>
         </div>
-        <div className="ed-copy flex items-center bg-nilex-navy px-8 py-16 lg:px-16 lg:py-24">
+        <div className="ed-copy flex items-center bg-nilex-navy px-5 py-12 sm:px-8 sm:py-16 lg:px-16 lg:py-24">
           <div className="max-w-md">
             <SectionLabel>Volume III · Street Luxe</SectionLabel>
-            <h3 className="mt-5 font-display text-3xl font-medium leading-tight text-nilex-cream md:text-4xl lg:text-5xl">
+            <h3 className="mt-4 font-display text-2xl sm:text-3xl font-medium leading-tight text-nilex-cream md:text-4xl lg:text-5xl">
               Where the street meets the <em className="italic text-nilex-gold">atelier</em>.
             </h3>
-            <p className="mt-6 text-base leading-relaxed text-nilex-cream/70">
+            <p className="mt-4 sm:mt-6 text-sm sm:text-base leading-relaxed text-nilex-cream/70">
               Volume III takes the house signatures into the city. Sculpted
               sneakers in bone suede, technical parkas with taped seams, and knit
               hoodies in extra-fine merino — engineered for the street, finished
               with house craft.
             </p>
-            <p className="mt-6 text-base leading-relaxed text-nilex-cream/70">
+            <p className="mt-4 sm:mt-6 text-sm sm:text-base leading-relaxed text-nilex-cream/70">
               Engineered fabrics, considered silhouettes, and the same quiet
               details the house is known for. Built to move.
             </p>
@@ -91,29 +93,31 @@ export default function EditorialSplit() {
       </div>
 
       {/* Block 2 — copy left, image right */}
-      <div className="grid items-stretch lg:grid-cols-2">
-        <div className="ed-copy order-2 flex items-center bg-nilex-navy px-8 py-16 lg:order-1 lg:px-16 lg:py-24">
+      <div className="grid items-stretch overflow-hidden lg:grid-cols-2">
+        <div className="ed-copy order-2 flex items-center bg-nilex-navy px-5 py-12 sm:px-8 sm:py-16 lg:order-1 lg:px-16 lg:py-24">
           <div className="max-w-md">
             <SectionLabel>Volume II · Sole Craft</SectionLabel>
-            <h3 className="mt-5 font-display text-3xl font-medium leading-tight text-nilex-cream md:text-4xl lg:text-5xl">
+            <h3 className="mt-4 font-display text-2xl sm:text-3xl font-medium leading-tight text-nilex-cream md:text-4xl lg:text-5xl">
               Built to last, <em className="italic text-nilex-gold">made to move</em>.
             </h3>
-            <p className="mt-6 text-base leading-relaxed text-nilex-cream/70">
+            <p className="mt-4 sm:mt-6 text-sm sm:text-base leading-relaxed text-nilex-cream/70">
               Every Nilex shoe starts with a sculpted last and full-grain leather or suede, finished by hand and built to be resoled for years, not seasons.
             </p>
-            <p className="mt-6 text-base leading-relaxed text-nilex-cream/70">
+            <p className="mt-4 sm:mt-6 text-sm sm:text-base leading-relaxed text-nilex-cream/70">
               Paired with technical outerwear — taped seams, weatherproof shells, insulated but light. Engineered for the commute, finished with atelier-level care.
             </p>
           </div>
         </div>
-        <div className="ed-img order-1 relative aspect-[4/5] overflow-hidden lg:order-2 lg:aspect-auto lg:min-h-[80vh]">
-          <Image
-            src={NILEX_SNEAKER_OLIVE}
-            alt="Sole craft editorial"
-            fill
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
-          />
+        <div className="order-1 overflow-hidden lg:order-2">
+          <div className="ed-img relative aspect-[4/5] w-full overflow-hidden lg:aspect-auto lg:min-h-[80vh]">
+            <Image
+              src={NILEX_SNEAKER_OLIVE}
+              alt="Sole craft editorial"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
