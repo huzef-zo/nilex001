@@ -16,7 +16,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-auto border-t border-white/10 bg-nilex-navy-deep text-nilex-cream">
+    <footer className="relative z-10 mt-auto border-t border-white/10 bg-nilex-navy-deep text-nilex-cream">
       <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
         {/* Sitemap */}
         <div className="grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">

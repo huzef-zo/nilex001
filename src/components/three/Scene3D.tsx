@@ -297,6 +297,8 @@ export default function Scene3D({ visible }: { visible: boolean }) {
       aria-hidden="true"
     >
       <Canvas
+        className="pointer-events-none"
+        style={{ pointerEvents: "none" }}
         camera={{ fov: 50, position: [0, 0, 5.5], near: 0.1, far: 100 }}
         // dpr as a [min, max] tuple — R3F handles capping against
         // window.devicePixelRatio automatically. No state needed.
