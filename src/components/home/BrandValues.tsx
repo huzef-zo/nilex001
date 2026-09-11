@@ -47,12 +47,12 @@ export default function BrandValues() {
   return (
     <section
       ref={root}
-      className="section-y relative z-10 bg-nilex-navy px-6 lg:px-12"
+      className="section-y relative z-10 bg-nilex-navy px-4 sm:px-6 lg:px-12 overflow-hidden"
     >
       <div className="mx-auto max-w-[1600px]">
-        <div className="mb-14 lg:mb-20">
+        <div className="mb-10 sm:mb-14 lg:mb-20">
           <SectionLabel>The House · What we believe</SectionLabel>
-          <h2 className="mt-5 max-w-3xl font-display text-4xl font-medium leading-tight text-nilex-cream md:text-5xl lg:text-6xl">
+          <h2 className="mt-4 sm:mt-5 max-w-3xl font-display text-2xl sm:text-4xl font-medium leading-tight text-nilex-cream md:text-5xl lg:text-6xl">
             Four ideas, kept <em className="italic text-nilex-gold">since the beginning</em>.
           </h2>
         </div>
@@ -61,7 +61,7 @@ export default function BrandValues() {
           {brandValues.map((v, i) => (
             <div
               key={v.title}
-              className="value-item group relative bg-nilex-navy p-8 transition-colors duration-500 hover:bg-nilex-navy-soft lg:p-10"
+              className="value-item group relative bg-nilex-navy p-6 sm:p-8 transition-colors duration-500 hover:bg-nilex-navy-soft lg:p-10"
               data-cursor="hover"
             >
               <span className="font-mono text-xs text-nilex-gold/60">0{i + 1}</span>
@@ -77,11 +77,11 @@ export default function BrandValues() {
         </div>
 
         {/* CTA band */}
-        <div className="relative mt-16 overflow-hidden rounded-sm bg-nilex-navy-soft lg:mt-24">
+        <div className="relative mt-12 sm:mt-16 overflow-hidden rounded-sm bg-nilex-navy-soft lg:mt-24">
           <div className="grid items-center gap-8 lg:grid-cols-[1.5fr_1fr]">
-            <div className="p-10 lg:p-16">
+            <div className="p-6 sm:p-10 lg:p-16">
               <SectionLabel>Get In Touch</SectionLabel>
-              <h3 className="mt-5 font-display text-3xl font-medium leading-tight text-nilex-cream md:text-4xl lg:text-5xl">
+              <h3 className="mt-4 sm:mt-5 font-display text-2xl sm:text-3xl font-medium leading-tight text-nilex-cream md:text-4xl lg:text-5xl">
                 Have a question? <em className="italic text-nilex-gold">We&apos;d love to hear from you.</em>
               </h3>
               <p className="mt-6 max-w-md text-base leading-relaxed text-nilex-cream/60">

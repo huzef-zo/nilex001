@@ -74,12 +74,12 @@ export default function ContactPage() {
   };
 
   return (
-    <main ref={root} className="relative z-10 min-h-screen bg-nilex-cream pt-32 pb-24 text-nilex-navy lg:pt-40 lg:pb-32">
-      <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
+    <main ref={root} className="relative z-10 min-h-screen bg-nilex-cream pt-24 sm:pt-32 pb-16 sm:pb-24 text-nilex-navy lg:pt-40 lg:pb-32 overflow-hidden">
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-12">
         {/* Header */}
-        <div className="mb-16 lg:mb-20">
+        <div className="mb-10 sm:mb-16 lg:mb-20">
           <SectionLabel>Get in Touch</SectionLabel>
-          <h1 className="mt-5 max-w-4xl font-display text-5xl font-medium leading-[1.05] md:text-6xl lg:text-8xl">
+          <h1 className="mt-4 sm:mt-5 max-w-4xl font-display text-3xl sm:text-5xl font-medium leading-[1.05] md:text-6xl lg:text-8xl">
             Come and see <em className="italic">the house</em>.
           </h1>
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-nilex-navy/60 md:text-lg">

@@ -74,13 +74,13 @@ export default function ShopPage() {
   };
 
   return (
-    <main ref={root} className="relative z-10 min-h-screen bg-nilex-cream pt-32 text-nilex-navy lg:pt-40">
-      <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
+    <main ref={root} className="relative z-10 min-h-screen bg-nilex-cream pt-24 sm:pt-32 text-nilex-navy lg:pt-40 overflow-hidden">
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-12">
         {/* Header */}
-        <div className="mb-12 flex flex-col gap-6 border-b border-nilex-navy/10 pb-10 lg:mb-16 lg:flex-row lg:items-end lg:justify-between">
+        <div className="mb-8 sm:mb-12 flex flex-col gap-6 border-b border-nilex-navy/10 pb-8 sm:pb-10 lg:mb-16 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <SectionLabel>The Browse · All Pieces</SectionLabel>
-            <h1 className="mt-5 font-display text-5xl font-medium leading-tight md:text-6xl lg:text-7xl">
+            <h1 className="mt-4 sm:mt-5 font-display text-3xl sm:text-5xl font-medium leading-tight md:text-6xl lg:text-7xl">
               Every piece, <em className="italic">in one place</em>.
             </h1>
           </div>
@@ -246,9 +246,9 @@ export default function ShopPage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 60 }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="fixed left-1/2 top-1/2 z-90 w-[94vw] max-w-4xl -translate-x-1/2 -translate-y-1/2 overflow-hidden bg-nilex-cream text-nilex-navy"
+              className="fixed left-1/2 top-1/2 z-90 w-[94vw] max-w-4xl max-h-[85vh] overflow-y-auto -translate-x-1/2 -translate-y-1/2 rounded-sm bg-nilex-cream text-nilex-navy"
             >
-              <div className="grid md:grid-cols-2">
+              <div className="grid md:grid-cols-2 relative">
                 <div className="relative aspect-[3/4] md:aspect-auto md:min-h-[560px]">
                   {quickView.image ? (
                     <Image

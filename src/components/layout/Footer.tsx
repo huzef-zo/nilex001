@@ -16,10 +16,10 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-auto border-t border-white/10 bg-nilex-navy-deep text-nilex-cream">
-      <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
+    <footer className="mt-auto border-t border-white/10 bg-nilex-navy-deep text-nilex-cream overflow-hidden">
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-12">
         {/* Sitemap */}
-        <div className="grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 py-12 sm:py-16 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="relative h-12 w-12 overflow-hidden rounded-full ring-1 ring-nilex-gold/40">
@@ -134,9 +134,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 py-6 text-xs text-white/50 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 py-6 text-xs text-white/50 md:flex-row text-center md:text-left">
           <p>© {currentYear} Nilex Fashion House. All rights reserved.</p>
-          <div className="flex flex-wrap items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <a
               href="https://t.me/nilexfashionn"
               target="_blank"

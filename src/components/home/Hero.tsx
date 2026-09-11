@@ -83,7 +83,7 @@ export default function Hero() {
     <section
       id="nilex-hero"
       ref={rootRef}
-      className="relative flex min-h-screen w-full items-center overflow-hidden bg-noise-navy px-6 pt-24 lg:px-12"
+      className="relative flex min-h-screen w-full items-center overflow-hidden bg-noise-navy px-4 sm:px-6 pt-24 pb-20 sm:pb-12 lg:px-12"
     >
       {/* Background gradient wash (sits above the 3D canvas for depth) */}
       <div className="pointer-events-none absolute inset-0 z-[2]">
@@ -107,8 +107,8 @@ export default function Hero() {
 
       {/* Headline */}
       <div className="hero-headline relative z-10 mx-auto w-full max-w-[1600px]">
-        <div className="mt-12 lg:mt-16">
-          <h1 className="font-display text-[clamp(2.75rem,9vw,9rem)] font-medium leading-[0.95] tracking-tight text-nilex-cream">
+        <div className="mt-8 sm:mt-12 lg:mt-16">
+          <h1 className="font-display text-[clamp(2rem,8.5vw,9rem)] font-medium leading-[1.02] sm:leading-[0.95] tracking-tight text-nilex-cream break-words">
             <span className="block overflow-hidden">
               <span className="hero-word inline-block">Modern</span>
             </span>
@@ -125,18 +125,18 @@ export default function Hero() {
             </span>
           </h1>
 
-          <div className="mt-10 flex flex-col items-start gap-8 lg:flex-row lg:items-end lg:justify-between">
-            <p className="hero-fade max-w-md text-base leading-relaxed text-nilex-cream/70 md:text-lg">
+          <div className="mt-8 sm:mt-10 flex flex-col items-start gap-6 sm:gap-8 lg:flex-row lg:items-end lg:justify-between">
+            <p className="hero-fade max-w-md text-sm sm:text-base leading-relaxed text-nilex-cream/70 md:text-lg">
               Nilex Fashion House is a modern atelier — quietly luxurious knitwear,
               footwear, outerwear and accessories, made in honest materials and
               built to be worn for years, not seasons.
             </p>
 
-            <div className="hero-fade flex flex-col gap-4 sm:flex-row">
-              <MagneticButton onClick={() => setPage("shop")} variant="primary">
+            <div className="hero-fade flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:gap-4">
+              <MagneticButton onClick={() => setPage("shop")} variant="primary" className="w-full sm:w-auto">
                 Explore the Collection
               </MagneticButton>
-              <MagneticButton onClick={() => setPage("collections")} variant="outline">
+              <MagneticButton onClick={() => setPage("collections")} variant="outline" className="w-full sm:w-auto">
                 View Lookbook
               </MagneticButton>
             </div>
@@ -145,7 +145,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom row: scroll cue + featured mark */}
-      <div className="hero-meta absolute bottom-8 left-0 right-0 z-10 mx-auto flex max-w-[1600px] items-end justify-between px-6 lg:px-12">
+      <div className="hero-meta absolute bottom-6 sm:bottom-8 left-0 right-0 z-10 mx-auto flex max-w-[1600px] items-end justify-between px-4 sm:px-6 lg:px-12">
         <button
           data-cursor="hover"
           onClick={() => {

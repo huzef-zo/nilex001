@@ -70,10 +70,10 @@ export default function EditorialSplit() {
         <div className="ed-img relative aspect-[4/5] overflow-hidden lg:aspect-auto lg:min-h-[80vh]">
           <PlaceholderImage className="absolute inset-0 h-full w-full" />
         </div>
-        <div className="ed-copy flex items-center bg-nilex-navy px-8 py-16 lg:px-16 lg:py-24">
+        <div className="ed-copy flex items-center bg-nilex-navy px-5 sm:px-8 py-10 sm:py-16 lg:px-16 lg:py-24">
           <div className="max-w-md">
             <SectionLabel>Volume III · Street Luxe</SectionLabel>
-            <h3 className="mt-5 font-display text-3xl font-medium leading-tight text-nilex-cream md:text-4xl lg:text-5xl">
+            <h3 className="mt-4 sm:mt-5 font-display text-2xl sm:text-3xl font-medium leading-tight text-nilex-cream md:text-4xl lg:text-5xl">
               Where the street meets the <em className="italic text-nilex-gold">atelier</em>.
             </h3>
             <p className="mt-6 text-base leading-relaxed text-nilex-cream/70">
@@ -92,10 +92,10 @@ export default function EditorialSplit() {
 
       {/* Block 2 — copy left, image right */}
       <div className="grid items-stretch lg:grid-cols-2">
-        <div className="ed-copy order-2 flex items-center bg-nilex-navy px-8 py-16 lg:order-1 lg:px-16 lg:py-24">
+        <div className="ed-copy order-2 flex items-center bg-nilex-navy px-5 sm:px-8 py-10 sm:py-16 lg:order-1 lg:px-16 lg:py-24">
           <div className="max-w-md">
             <SectionLabel>Volume II · Sole Craft</SectionLabel>
-            <h3 className="mt-5 font-display text-3xl font-medium leading-tight text-nilex-cream md:text-4xl lg:text-5xl">
+            <h3 className="mt-4 sm:mt-5 font-display text-2xl sm:text-3xl font-medium leading-tight text-nilex-cream md:text-4xl lg:text-5xl">
               Built to last, <em className="italic text-nilex-gold">made to move</em>.
             </h3>
             <p className="mt-6 text-base leading-relaxed text-nilex-cream/70">

@@ -47,12 +47,12 @@ export default function CollectionsPage() {
   }, []);
 
   return (
-    <main ref={root} className="relative z-10 min-h-screen bg-nilex-navy-deep pt-32 text-nilex-cream lg:pt-40">
-      <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
+    <main ref={root} className="relative z-10 min-h-screen bg-nilex-navy-deep pt-24 sm:pt-32 text-nilex-cream lg:pt-40 overflow-hidden">
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-12">
         {/* Header */}
-        <div className="mb-16 lg:mb-24">
+        <div className="mb-10 sm:mb-16 lg:mb-24">
           <SectionLabel>The Volumes · AW26</SectionLabel>
-          <h1 className="mt-5 max-w-4xl font-display text-5xl font-medium leading-[1.05] md:text-6xl lg:text-8xl">
+          <h1 className="mt-4 sm:mt-5 max-w-4xl font-display text-3xl sm:text-5xl font-medium leading-[1.05] md:text-6xl lg:text-8xl">
             Four volumes, <em className="italic text-nilex-gold">one season</em>.
           </h1>
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-nilex-cream/60 md:text-lg">
@@ -65,7 +65,7 @@ export default function CollectionsPage() {
       </div>
 
       {/* Collection cards */}
-      <div className="mx-auto max-w-[1600px] px-6 pb-24 lg:px-12 lg:pb-32">
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 pb-24 lg:px-12 lg:pb-32">
         <div className="space-y-6 lg:space-y-12">
           {collections.map((c, i) => (
             <article
@@ -90,14 +90,14 @@ export default function CollectionsPage() {
                   className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-nilex-navy-deep/60 to-transparent md:bg-gradient-to-r" />
-                <span className="absolute left-5 top-5 rounded-full bg-black/40 px-3 py-1 text-[10px] uppercase tracking-luxe text-nilex-cream backdrop-blur-sm">
+                <span className="absolute left-4 top-4 rounded-full bg-black/40 px-3 py-1 text-[10px] uppercase tracking-luxe text-nilex-cream backdrop-blur-sm">
                   {c.season}
                 </span>
               </div>
-              <div className="flex flex-col justify-between p-8 lg:p-16">
+              <div className="flex flex-col justify-between p-6 sm:p-8 lg:p-16">
                 <div>
                   <span className="font-mono text-xs text-nilex-gold/60">0{i + 1} / 0{collections.length}</span>
-                  <h2 className="mt-6 font-display text-4xl font-medium leading-tight md:text-5xl lg:text-6xl">
+                  <h2 className="mt-4 sm:mt-6 font-display text-2xl sm:text-4xl font-medium leading-tight md:text-5xl lg:text-6xl">
                     {c.name}
                   </h2>
                   <p className="mt-4 max-w-md font-display text-xl italic text-nilex-gold">

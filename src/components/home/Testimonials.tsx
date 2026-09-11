@@ -28,24 +28,24 @@ export default function Testimonials() {
 
   return (
     <section
-      className="section-y relative z-10 overflow-hidden bg-nilex-cream px-6 text-nilex-navy lg:px-12"
+      className="section-y relative z-10 overflow-hidden bg-nilex-cream px-4 sm:px-6 text-nilex-navy lg:px-12"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
       <div className="mx-auto max-w-[1400px]">
-        <div className="mb-12 flex items-center justify-between lg:mb-16">
+        <div className="mb-8 sm:mb-12 flex items-center justify-between lg:mb-16">
           <SectionLabel>From the Client</SectionLabel>
           <span className="font-mono text-xs text-nilex-navy/40">
             0{active + 1} / 0{testimonials.length}
           </span>
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-20">
+        <div className="grid gap-6 sm:gap-10 lg:grid-cols-[1fr_2fr] lg:gap-20">
           <div>
-            <p className="font-display text-6xl font-medium leading-none text-nilex-gold md:text-8xl">
+            <p className="font-display text-5xl sm:text-6xl font-medium leading-none text-nilex-gold md:text-8xl">
               &ldquo;
             </p>
-            <p className="mt-4 text-xs uppercase tracking-luxe text-nilex-navy/60">
+            <p className="mt-2 sm:mt-4 text-xs uppercase tracking-luxe text-nilex-navy/60">
               What they&apos;re saying
             </p>
           </div>
@@ -53,7 +53,7 @@ export default function Testimonials() {
           <div>
             <blockquote
               key={active}
-              className="testimonial-text font-display text-2xl font-medium italic leading-snug md:text-4xl lg:text-5xl"
+              className="testimonial-text font-display text-xl sm:text-2xl font-medium italic leading-snug md:text-4xl lg:text-5xl"
             >
               {testimonials[active].quote}
             </blockquote>

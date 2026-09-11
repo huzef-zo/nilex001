@@ -51,13 +51,13 @@ export default function NewArrivals() {
   return (
     <section
       ref={root}
-      className="section-y relative z-10 bg-nilex-cream px-6 text-nilex-navy lg:px-12"
+      className="section-y relative z-10 bg-nilex-cream px-4 sm:px-6 text-nilex-navy lg:px-12 overflow-hidden"
     >
       <div className="mx-auto max-w-[1600px]">
-        <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end lg:mb-16">
+        <div className="mb-8 sm:mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end lg:mb-16">
           <div>
             <SectionLabel>The Edit · This Week</SectionLabel>
-            <h2 className="mt-5 max-w-2xl font-display text-4xl font-medium leading-tight md:text-5xl lg:text-6xl">
+            <h2 className="mt-4 sm:mt-5 max-w-2xl font-display text-2xl sm:text-4xl font-medium leading-tight md:text-5xl lg:text-6xl">
               New arrivals, freshly <em className="italic">cut</em>.
             </h2>
           </div>

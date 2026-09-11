@@ -62,9 +62,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="dark">
+    <html lang="en" className="dark overflow-x-hidden max-w-full">
       <body
-        className={`${inter.variable} ${playfair.variable} ${jetbrainsMono.variable} antialiased bg-background text-foreground`}
+        className={`${inter.variable} ${playfair.variable} ${jetbrainsMono.variable} antialiased bg-background text-foreground overflow-x-hidden max-w-full w-full relative`}
       >
         {children}
         <Toaster />

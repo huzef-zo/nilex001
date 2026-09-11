@@ -115,15 +115,15 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <main ref={root} className="relative z-10 bg-nilex-navy-deep pt-32 text-nilex-cream lg:pt-40">
+    <main ref={root} className="relative z-10 bg-nilex-navy-deep pt-24 sm:pt-32 text-nilex-cream lg:pt-40 overflow-hidden">
       {/* Hero */}
-      <section className="about-hero relative h-[70vh] min-h-[500px] w-full overflow-hidden">
+      <section className="about-hero relative h-[60vh] sm:h-[70vh] min-h-[420px] sm:min-h-[500px] w-full overflow-hidden">
         <PlaceholderImage className="about-hero-img absolute inset-0 h-full w-full" />
         <div className="absolute inset-0 bg-gradient-to-b from-nilex-navy-deep/40 via-transparent to-nilex-navy-deep" />
         <div className="absolute inset-0 flex items-center">
-          <div className="mx-auto w-full max-w-[1600px] px-6 lg:px-12">
+          <div className="mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-12">
             <SectionLabel>The House · Est. 2026</SectionLabel>
-            <h1 className="mt-5 max-w-5xl font-display text-5xl font-medium leading-[1.05] md:text-6xl lg:text-8xl">
+            <h1 className="mt-4 sm:mt-5 max-w-5xl font-display text-3xl sm:text-5xl font-medium leading-[1.05] md:text-6xl lg:text-8xl">
               A small house, <em className="italic text-nilex-gold">a single point of view</em>.
             </h1>
           </div>
@@ -131,7 +131,7 @@ export default function AboutPage() {
       </section>
 
       {/* Intro essay */}
-      <section className="section-y px-6 lg:px-12">
+      <section className="section-y px-4 sm:px-6 lg:px-12">
         <div className="mx-auto max-w-3xl">
           <p className="font-display text-2xl italic leading-relaxed text-nilex-cream/90 md:text-3xl lg:text-4xl">
             Nilex opened this year with a simple idea: modern menswear doesn&apos;t need to be loud to be noticed.
@@ -178,11 +178,11 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="section-y px-6 lg:px-12">
+      <section className="section-y px-4 sm:px-6 lg:px-12">
         <div className="mx-auto max-w-[1600px]">
-          <div className="mb-12 lg:mb-20">
+          <div className="mb-8 sm:mb-12 lg:mb-20">
             <SectionLabel>The House · Where We&apos;re Headed</SectionLabel>
-            <h2 className="mt-5 max-w-3xl font-display text-4xl font-medium leading-tight md:text-5xl lg:text-6xl">
+            <h2 className="mt-4 sm:mt-5 max-w-3xl font-display text-2xl sm:text-4xl font-medium leading-tight md:text-5xl lg:text-6xl">
               A new house, <em className="italic text-nilex-gold">told honestly</em>.
             </h2>
           </div>

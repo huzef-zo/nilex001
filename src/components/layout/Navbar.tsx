@@ -37,7 +37,7 @@ export default function Navbar() {
           scrolled ? "glass-navy border-b border-white/5" : "bg-transparent"
         }`}
       >
-        <nav className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-4 lg:px-12 lg:py-6">
+        <nav className="mx-auto flex max-w-[1600px] items-center justify-between px-4 sm:px-6 py-3 sm:py-4 lg:px-12 lg:py-6">
           {/* Logo */}
           <button
             onClick={() => handleNav("home")}
@@ -112,10 +112,10 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-40 bg-nilex-navy-deep/95 backdrop-blur-xl md:hidden"
+            className="fixed inset-0 z-40 overflow-y-auto bg-nilex-navy-deep/95 backdrop-blur-xl md:hidden"
           >
-            <div className="flex h-full flex-col justify-center px-8 pt-20">
-              <ul className="space-y-2">
+            <div className="flex min-h-full flex-col justify-between px-6 py-20 sm:px-8">
+              <ul className="space-y-1">
                 {navItems.map((item, i) => (
                   <motion.li
                     key={item.key}
@@ -125,10 +125,10 @@ export default function Navbar() {
                   >
                     <button
                       onClick={() => handleNav(item.key)}
-                      className="flex w-full items-baseline justify-between border-b border-white/10 py-5 text-left"
+                      className="flex w-full items-baseline justify-between border-b border-white/10 py-4 sm:py-5 text-left"
                     >
                       <span
-                        className={`font-display text-4xl font-medium ${
+                        className={`font-display text-2xl sm:text-3xl md:text-4xl font-medium ${
                           page === item.key ? "text-nilex-gold" : "text-nilex-cream"
                         }`}
                       >
@@ -145,7 +145,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
-                className="mt-12 space-y-2 text-sm text-white/60"
+                className="mt-8 space-y-2 text-xs sm:text-sm text-white/60"
               >
                 <p className="uppercase tracking-luxe text-nilex-gold/80">Bishoftu, Next to Farmi Cafe</p>
                 <p>

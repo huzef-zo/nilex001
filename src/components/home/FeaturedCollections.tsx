@@ -86,12 +86,12 @@ export default function FeaturedCollections() {
   }, []);
 
   return (
-    <section ref={root} className="section-y relative z-10 bg-nilex-navy-deep px-6 lg:px-12">
+    <section ref={root} className="section-y relative z-10 bg-nilex-navy-deep px-4 sm:px-6 lg:px-12 overflow-hidden">
       <div className="mx-auto max-w-[1600px]">
-        <div className="fc-header mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end lg:mb-20">
+        <div className="fc-header mb-10 sm:mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end lg:mb-20">
           <div>
             <SectionLabel>The House · AW26</SectionLabel>
-            <h2 className="mt-5 max-w-3xl font-display text-4xl font-medium leading-tight text-nilex-cream md:text-5xl lg:text-6xl">
+            <h2 className="mt-4 sm:mt-5 max-w-3xl font-display text-2xl sm:text-4xl font-medium leading-tight text-nilex-cream md:text-5xl lg:text-6xl">
               Four volumes, one <em className="italic text-nilex-gold">point of view</em>.
             </h2>
           </div>
@@ -136,8 +136,8 @@ export default function FeaturedCollections() {
                 </div>
 
                 {/* Bottom content */}
-                <div className="collection-label absolute inset-x-0 bottom-0 p-6 md:p-8">
-                  <h3 className="font-display text-3xl font-medium text-nilex-cream md:text-4xl">
+                <div className="collection-label absolute inset-x-0 bottom-0 p-4 sm:p-6 md:p-8">
+                  <h3 className="font-display text-2xl sm:text-3xl font-medium text-nilex-cream md:text-4xl">
                     {c.name}
                   </h3>
                   <p className="mt-2 max-w-md text-sm text-nilex-cream/70">
