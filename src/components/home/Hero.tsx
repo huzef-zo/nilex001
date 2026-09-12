@@ -83,7 +83,7 @@ export default function Hero() {
     <section
       id="nilex-hero"
       ref={rootRef}
-      className="relative flex min-h-screen w-full max-w-full flex-col justify-between overflow-hidden bg-noise-navy px-4 pb-20 pt-24 sm:px-6 lg:px-12"
+      className="relative flex min-h-screen w-full max-w-full flex-col justify-between overflow-hidden px-4 pb-20 pt-24 sm:px-6 lg:px-12"
     >
       {/* Background gradient wash (sits above the 3D canvas for depth) */}
       <div className="pointer-events-none absolute inset-0 z-[2]">
