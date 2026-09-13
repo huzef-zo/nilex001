@@ -26,6 +26,7 @@ import Scene3D from "@/components/three/Scene3D";
 import HomePage from "@/components/home/HomePage";
 import ShopPage from "@/components/shop/ShopPage";
 import CollectionsPage from "@/components/collections/CollectionsPage";
+import CollectionDetailPage from "@/components/collections/CollectionDetailPage";
 import AboutPage from "@/components/about/AboutPage";
 import ContactPage from "@/components/contact/ContactPage";
 
@@ -62,6 +63,7 @@ export default function Page() {
             {page === "home" && <HomePage />}
             {page === "shop" && <ShopPage />}
             {page === "collections" && <CollectionsPage />}
+            {page === "collectionDetail" && <CollectionDetailPage />}
             {page === "about" && <AboutPage />}
             {page === "contact" && <ContactPage />}
           </motion.main>

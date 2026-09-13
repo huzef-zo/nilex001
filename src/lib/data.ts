@@ -7,7 +7,7 @@
 export type Product = {
   id: string;
   name: string;
-  category: "Knitwear" | "Footwear" | "Outerwear" | "Accessories";
+  category: "Shoes" | "Pants" | "Jackets" | "T-shirt" | "Shirts";
   price: number;
   compareAt?: number;
   colorway: string;
@@ -49,36 +49,9 @@ export const STOCK_IMAGES = STOCK;
 
 export const products: Product[] = [
   {
-    id: "nx-knit-01",
-    name: "Maison Knit Cardigan",
-    category: "Knitwear",
-    price: 189,
-    compareAt: 240,
-    colorway: "Sand Beige",
-    image: NILEX_KNIT_BEIGE,
-    badge: "New",
-    description:
-      "An open-knit cardigan in soft sand beige with a textured vertical weave. Collared polo placket with bone buttons and ribbed cuffs. Cut for a relaxed silhouette that layers cleanly over a tee or shirt.",
-    fabric: "60% Cotton, 30% Viscose, 10% Linen",
-    sizes: ["S", "M", "L", "XL"],
-  },
-  {
-    id: "nx-knit-02",
-    name: "Atelier Quarter-Zip",
-    category: "Knitwear",
-    price: 165,
-    colorway: "Heather Grey",
-    image: NILEX_KNIT_GRAY,
-    badge: "Bestseller",
-    description:
-      "A heathered quarter-zip polo in marled grey with a fine metal zipper and ribbed trims. Embroidered Nilex mark at the chest. A wardrobe staple that bridges casual and tailored.",
-    fabric: "100% Extra-fine Merino Wool",
-    sizes: ["S", "M", "L", "XL", "XXL"],
-  },
-  {
     id: "nx-foot-01",
     name: "Drift Low Trainer",
-    category: "Footwear",
+    category: "Shoes",
     price: 245,
     colorway: "Olive Sage",
     image: NILEX_SNEAKER_OLIVE,
@@ -91,7 +64,7 @@ export const products: Product[] = [
   {
     id: "nx-foot-02",
     name: "Court Suede Sneaker",
-    category: "Footwear",
+    category: "Shoes",
     price: 220,
     colorway: "Bone Suede",
     image: NILEX_SNEAKER_SUEDE,
@@ -103,7 +76,7 @@ export const products: Product[] = [
   {
     id: "nx-foot-03",
     name: "Stripe Runner",
-    category: "Footwear",
+    category: "Shoes",
     price: 199,
     compareAt: 230,
     colorway: "Black / Ivory",
@@ -114,129 +87,20 @@ export const products: Product[] = [
     fabric: "Synthetic leather upper, Rubber sole",
     sizes: ["40", "41", "42", "43", "44", "45"],
   },
-  {
-    id: "nx-outer-01",
-    name: "Field Overcoat",
-    category: "Outerwear",
-    price: 745,
-    colorway: "Stone",
-    image: STOCK.outerwearForbes,
-    hoverImage: STOCK.outerwearSwitchback,
-    badge: "New",
-    description:
-      "A long-line overcoat in a stone melton with a clean button stance and angled pockets. Structured body with a relaxed shoulder. Built to layer over outerwear or knitwear.",
-    fabric: "80% Wool, 20% Cashmere",
-    sizes: ["S", "M", "L", "XL"],
-  },
-  {
-    id: "nx-outer-02",
-    name: "Technical Parka",
-    category: "Outerwear",
-    price: 580,
-    colorway: "Slate",
-    image: STOCK.outerwearHypebeast,
-    hoverImage: STOCK.outerwearIsigny,
-    description:
-      "A weatherproof parka with taped seams, a hidden two-way zip and a generous hood. Insulated but lightweight. Engineered for the city winter.",
-    fabric: "Recycled nylon shell, Primaloft fill",
-    sizes: ["S", "M", "L", "XL"],
-  },
-  {
-    id: "nx-acc-01",
-    name: "Heritage Leather Wallet",
-    category: "Accessories",
-    price: 145,
-    colorway: "Tan",
-    image: STOCK.accPopov,
-    badge: "Bestseller",
-    description:
-      "A full-grain tan leather wallet with hand-burnished edges and eight card slots. Slim profile that patinas beautifully with wear. Made in a small atelier.",
-    fabric: "Full-grain vegetable-tanned leather",
-    sizes: ["One Size"],
-  },
-  {
-    id: "nx-acc-02",
-    name: " Automatic Watch",
-    category: "Accessories",
-    price: 410,
-    colorway: "Silver / Onyx",
-    image: STOCK.accAlamy,
-    badge: "Limited",
-    description:
-      "A 40mm automatic watch with a brushed steel case, onyx dial and sapphire crystal. Exhibition caseback. Quiet, considered, and built to last.",
-    fabric: "316L Steel, Sapphire crystal",
-    sizes: ["One Size"],
-  },
-  {
-    id: "nx-acc-03",
-    name: "Acetate Sunglasses",
-    category: "Accessories",
-    price: 195,
-    colorway: "Tortoise",
-    image: STOCK.accLATimes,
-    description:
-      "A classic keyhole-frame sunglass in tortoise acetate with green mineral lenses. UV400 protection and a hand-polished finish. A timeless silhouette.",
-    fabric: "Italian acetate, Mineral lens",
-    sizes: ["One Size"],
-  },
 ];
 
 export type Collection = {
   id: string;
   name: string;
-  season: string;
-  tagline: string;
-  description: string;
-  cover: string;
-  alt?: string;
-  productCount: number;
+  cover: string | null;
 };
 
 export const collections: Collection[] = [
-  {
-    id: "atelier-essentials",
-    name: "Atelier Essentials",
-    season: "AW26 — Volume I",
-    tagline: "The foundation pieces, reimagined each season.",
-    description:
-      "A capsule of the wardrobe staples every man returns to — fine-gauge knitwear, clean tees, and the perfect pant. Quietly luxurious, endlessly wearable.",
-    cover: NILEX_KNIT_BEIGE,
-    alt: STOCK.boutiqueDries,
-    productCount: 14,
-  },
-  {
-    id: "sole-craft",
-    name: "Sole Craft",
-    season: "AW26 — Volume II",
-    tagline: "Every step, considered.",
-    description:
-      "Nilex footwear is built with the same rigor our ateliers have always applied — sculpted lasts, full-grain leathers and suedes, and soles engineered to be resoled rather than replaced. Paired with lightweight technical outerwear designed to move as fast as the city does.",
-    cover: NILEX_SNEAKER_SUEDE,
-    alt: STOCK.outerwearForbes,
-    productCount: 16,
-  },
-  {
-    id: "street-luxe",
-    name: "Street Luxe",
-    season: "AW26 — Volume III",
-    tagline: "Where the street meets the atelier.",
-    description:
-      "Premium sneakers, technical outerwear and elevated essentials with a streetwear sensibility. Engineered fabrics, sculpted silhouettes, considered details.",
-    cover: NILEX_SNEAKER_BLACK,
-    alt: STOCK.streetWwd,
-    productCount: 18,
-  },
-  {
-    id: "house-signatures",
-    name: "House Signatures",
-    season: "Permanent Collection",
-    tagline: "The icons that define the house.",
-    description:
-      "The pieces that built Nilex — our most-loved silhouettes in the fabrics and colorways that have come to define the house. Re-stocked, never re-imagined.",
-    cover: NILEX_KNIT_GRAY,
-    alt: STOCK.boutiqueCali,
-    productCount: 9,
-  },
+  { id: "shoes", name: "Shoes", cover: NILEX_SNEAKER_OLIVE },
+  { id: "pants", name: "Pants", cover: null },
+  { id: "jackets", name: "Jackets", cover: null },
+  { id: "t-shirt", name: "T-shirt", cover: null },
+  { id: "shirts", name: "Shirts", cover: null },
 ];
 
 export const testimonials = [
