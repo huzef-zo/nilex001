@@ -6,10 +6,16 @@
 import { create } from "zustand";
 import type { PageKey } from "@/lib/data";
 
+export type ActivePage = PageKey | "collectionDetail";
+
 type NilexState = {
-  page: PageKey;
-  prevPage: PageKey | null;
-  setPage: (page: PageKey) => void;
+  page: ActivePage;
+  prevPage: ActivePage | null;
+  setPage: (page: ActivePage) => void;
+
+  // Selected collection detail
+  selectedCollectionId: string | null;
+  setSelectedCollectionId: (id: string | null) => void;
 
   // Menu
   menuOpen: boolean;
@@ -32,6 +38,9 @@ export const useNilex = create<NilexState>((set) => ({
   page: "home",
   prevPage: null,
   setPage: (page) => set((s) => ({ prevPage: s.page, page, menuOpen: false })),
+
+  selectedCollectionId: null,
+  setSelectedCollectionId: (selectedCollectionId) => set({ selectedCollectionId }),
 
   menuOpen: false,
   setMenuOpen: (menuOpen) => set({ menuOpen }),
